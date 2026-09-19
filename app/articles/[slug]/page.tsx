@@ -2,7 +2,6 @@ import type {Metadata} from "next";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {getAllArticles,getArticleBySlug,getRelatedArticles} from "@/lib/articles";
-import {markdownToHtml} from "@/lib/markdown";
 import {AffiliateCTA} from "@/components/affiliate-cta";
 import {AdSlot} from "@/components/ad-slot";
 import {JsonLd} from "@/components/json-ld";
@@ -15,8 +14,8 @@ import {getEditorialDesk} from "@/lib/editorial";
 export function generateStaticParams(){return getAllArticles().map(a=>({slug:a.slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)return{};
- const base=SITE_URL;const url=base+"/articles/"+a.slug+"/";
- return{title:a.title,description:a.description,keywords:a.keywords,authors:[{name:a.author,url:base+"/author/guidesignal-editorial-team/"}],alternates:{canonical:url},openGraph:{type:"article",siteName:"GuideSignal",title:a.title,description:a.description,url,publishedTime:a.date,modifiedTime:a.updated,authors:[a.author],section:a.categoryName,tags:a.keywords},twitter:{card:"summary",title:a.title,description:a.description}};
+ const base=SITE_URL;const url=base+"/articles/"+a.slug+"/";const desk=getEditorialDesk(a.category);
+ return{title:a.title,description:a.description,keywords:a.keywords,authors:[{name:desk.name,url:base+"/author/guidesignal-editorial-team/"}],alternates:{canonical:url},openGraph:{type:"article",siteName:"GuideSignal",title:a.title,description:a.description,url,publishedTime:a.date,modifiedTime:a.updated,authors:[desk.name],section:a.categoryName,tags:a.keywords},twitter:{card:"summary",title:a.title,description:a.description}};
 }
 export default async function ArticlePage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)notFound();
@@ -26,7 +25,6 @@ export default async function ArticlePage({params}:{params:Promise<{slug:string}
  const articleSchema={"@context":"https://schema.org","@type":"Article","headline":a.title,"description":a.description,"image":[articleImage],"datePublished":a.date,"dateModified":a.updated,"inLanguage":"en","wordCount":totalWords,"isAccessibleForFree":true,"mainEntityOfPage":{"@type":"WebPage","@id":articleUrl},"author":{"@type":"Organization","@id":siteUrl+"#"+desk.id,"name":desk.name,"url":siteUrl+"/author/guidesignal-editorial-team/"},"publisher":{"@type":"Organization","@id":siteUrl+"#organization","name":"GuideSignal","url":siteUrl},"articleSection":a.categoryName,"keywords":a.keywords};
  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":a.categoryName,"item":siteUrl+"/category/"+a.category+"/"},{"@type":"ListItem","position":3,"name":a.title,"item":articleUrl}]};
  const minutes=Math.max(1,Math.round(totalWords/220));
- const articleHtml=markdownToHtml(a.body);
  return <><JsonLd data={[articleSchema,breadcrumb]}/><ReadingProgress/><div className="breadcrumbs"><Link prefetch={false} href="/">Home</Link><span>/</span><Link prefetch={false} href={"/category/"+a.category+"/"}>{a.categoryName}</Link><span>/</span><span aria-current="page">{a.title}</span></div>
  <div className="container article-layout"><article className="article-shell article-reading"><header className="article-header"><span className="eyebrow">{a.categoryName}</span><h1>{a.title}</h1><div className="article-meta"><span>By <Link prefetch={false} href="/author/guidesignal-editorial-team/">{desk.name}</Link></span><span>•</span><span>Desk: {desk.name}</span><span>•</span><span>Updated {a.updated}</span><span>•</span><span>{minutes} min read</span><span>•</span><span>{a.stage}</span></div><div className="editorial-trust-strip"><span><strong>Research desk</strong> {desk.focus}</span><span><strong>Sources</strong> {a.sources.length}</span><span><strong>Standard</strong> {desk.standard}</span></div><div className="disclosure-note">Some links may be affiliate links. See our <Link prefetch={false} href="/disclosure/">affiliate disclosure</Link>.</div></header>
  <ArticleVisual slug={a.slug} category={a.category} title={a.title} variant="hero"/>
