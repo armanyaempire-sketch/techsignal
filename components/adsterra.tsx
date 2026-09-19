@@ -1,6 +1,5 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
-import {usePathname} from "next/navigation";
 import {hasOptionalConsent} from "./consent";
 
 type BannerSize="468x60"|"300x250"|"160x300"|"160x600"|"728x90"|"320x50";
@@ -97,7 +96,5 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?:"
  * contextual, consent-gated, clearly labeled, and tied to explicit slots.
  */
 export function AdsterraGlobalAds(){
- const pathname=usePathname();
- void pathname;
  return null;
 }
