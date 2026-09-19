@@ -11,7 +11,7 @@ const envMap:Record<ClickBankOfferKey,string|undefined>={
 export function AffiliateCTA({articleSlug,position,offerKey}:{articleSlug:string;position:string;offerKey?:string}){
   const key=offerKey as ClickBankOfferKey|undefined;
   const offer=key&&clickBankOffers[key];
-  const hop=(key&&envMap[key])||offer?.hoplink||process.env.NEXT_PUBLIC_CLICKBANK_DEFAULT_HOPLINK;
+  const hop=(key&&envMap[key])||offer?.hoplink;
   useEffect(()=>{
     const g=(window as Window&{gtag?:Function}).gtag;
     const selector='[data-affiliate-cta="'+position+'"]';
@@ -38,9 +38,10 @@ export function AffiliateCTA({articleSlug,position,offerKey}:{articleSlug:string
   url.searchParams.set("traffic_source","guidesignal");
   url.searchParams.set("campaign",articleSlug);
   url.searchParams.set("creative",position);
+  if(key)url.searchParams.set("offer",key);
   const name=offer?.name||"the current offer";
   return <aside className="affiliate-card" data-affiliate-cta={position}>
-    <div><span className="eyebrow">Affiliate disclosure</span><h3>Check {name}</h3><p>Review the seller's current pricing, terms, ingredients or product details before purchasing. GuideSignal may earn a commission from a qualifying purchase.</p></div>
-    <a className="button" data-affiliate href={url.toString()} target="_blank" rel="sponsored noopener noreferrer">View current offer</a>
+    <div><span className="eyebrow">Affiliate disclosure</span><h3>Review {name}</h3><p>Review the seller's current pricing, terms, ingredients or product details before purchasing. GuideSignal may earn a commission from a qualifying purchase.</p></div>
+    <a className="button" data-affiliate href={url.toString()} target="_blank" rel="sponsored noopener noreferrer">Review current offer</a>
   </aside>;
 }
