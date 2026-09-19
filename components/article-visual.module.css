@@ -29,3 +29,20 @@
 .card{
  border-color:#2b4169;
 }
+
+/* GuideSignal correction: bright multi-color article visual treatment */
+.visual{
+ background:linear-gradient(135deg,#dbeafe 0%,#ede9fe 38%,#cffafe 68%,#ffe4e6 100%);
+ border-color:#b8c9ee;
+ box-shadow:0 12px 30px rgba(70,90,150,.14);
+}
+.visual::after{
+ background:linear-gradient(120deg,rgba(37,99,235,.12) 0%,rgba(124,58,237,.10) 42%,rgba(13,148,136,.10) 70%,rgba(244,63,94,.10) 100%);
+ mix-blend-mode:normal;
+ opacity:1;
+}
+.visual img{
+ filter:brightness(1.04) saturate(1.55) contrast(1.04);
+}
+.top,.hero{border-color:#b8c9ee}
+.card{border-color:#c4d2ee}
