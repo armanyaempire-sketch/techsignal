@@ -9,13 +9,13 @@ export default function sitemap():MetadataRoute.Sitemap{
  const categories=getCategories();
  const latest=articles.map(a=>a.updated).sort().at(-1)||"2026-09-19";
  return[
-  {url:SITE_URL+"/",lastModified:latest,changeFrequency:"daily",priority:1},
+  {url:SITE_URL+"/",lastModified:latest,changeFrequency:"daily" as const,priority:1},
   ...categories.map(c=>{
    const categoryArticles=articles.filter(a=>a.category===c.slug);
    const lastModified=categoryArticles.map(a=>a.updated).sort().at(-1)||latest;
-   return{url:SITE_URL+"/category/"+c.slug+"/",lastModified,changeFrequency:"weekly",priority:.8};
+   return{url:SITE_URL+"/category/"+c.slug+"/",lastModified,changeFrequency:"weekly" as const,priority:.8};
   }),
-  ...articles.map(a=>({url:SITE_URL+"/articles/"+a.slug+"/",lastModified:a.updated,changeFrequency:"monthly",priority:.7})),
-  ...["about","editorial-policy","disclosure","privacy","terms","contact","author/guidesignal-editorial-team"].map(p=>({url:SITE_URL+"/"+p+"/",lastModified:latest,changeFrequency:"monthly",priority:.3}))
+  ...articles.map(a=>({url:SITE_URL+"/articles/"+a.slug+"/",lastModified:a.updated,changeFrequency:"monthly" as const,priority:.7})),
+  ...["about","editorial-policy","disclosure","privacy","terms","contact","author/guidesignal-editorial-team"].map(p=>({url:SITE_URL+"/"+p+"/",lastModified:latest,changeFrequency:"monthly" as const,priority:.3}))
  ];
 }
