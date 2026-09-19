@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: marketing funnel, content funnel, affiliate funnel
-sources: https://developers.google.com/analytics
+sources: https://developers.google.com/analytics|https://developers.google.com/analytics/devguides/collection/ga4/events
 ---
 
 A digital marketing funnel is a model for understanding how someone moves from discovering a problem to evaluating solutions and taking an action.

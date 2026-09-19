@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: SEO vs paid traffic, organic search, paid advertising
-sources: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+sources: https://developers.google.com/search/docs/fundamentals/seo-starter-guide|https://support.google.com/google-ads/answer/1722022?hl=en
 ---
 
 SEO and paid traffic can both bring visitors, but they have different cost structures, time horizons and operating requirements.

@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: focus audio, brain training audio, concentration products, focus product, brain training
-sources: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
+sources: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance|https://www.nia.nih.gov/health/cognitive-health-and-older-adults
 ---
 
 Audio products marketed for focus, concentration or "brain training" can vary widely. Some are primarily entertainment or relaxation products, while others make stronger performance or health-related claims.

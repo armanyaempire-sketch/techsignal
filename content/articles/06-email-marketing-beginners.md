@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: email marketing, email funnel, newsletter
-sources: https://support.google.com/a/answer/81126
+sources: https://support.google.com/a/answer/81126|https://support.google.com/mail/answer/15263077?hl=en
 ---
 
 Email marketing is a direct communication channel with people who have chosen to receive messages from a business or publisher.

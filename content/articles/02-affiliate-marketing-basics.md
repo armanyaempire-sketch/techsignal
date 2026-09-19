@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: affiliate marketing, affiliate website, ClickBank
-sources: https://developers.google.com/search/docs/essentials/spam-policies
+sources: https://developers.google.com/search/docs/essentials/spam-policies|https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
 ---
 
 Affiliate marketing is a performance-based publishing model in which a website or creator refers people to a merchant through a tracked link. Depending on the program, the publisher may receive a commission when a required action happens after the referral.

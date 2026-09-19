@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: AI content workflow, AI writing workflow, editorial process
-sources: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+sources: https://developers.google.com/search/docs/fundamentals/creating-helpful-content|https://developers.google.com/search/docs/essentials/spam-policies
 ---
 
 An AI content workflow should start with a human-defined brief and end with a human quality check.

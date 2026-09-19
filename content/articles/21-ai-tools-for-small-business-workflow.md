@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: AI workflow small business, AI tools small business, small business automation, AI productivity
-sources: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+sources: https://developers.google.com/search/docs/fundamentals/creating-helpful-content|https://developers.google.com/search/docs/essentials/spam-policies
 ---
 
 AI can help a small business without turning the operation into a collection of disconnected tools. The practical objective is to make repeatable work easier while keeping important judgment with a person.

@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: affiliate content funnel, affiliate SEO, ClickBank
-sources: https://developers.google.com/search/docs/essentials/spam-policies
+sources: https://developers.google.com/search/docs/essentials/spam-policies|https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
 ---
 
 The strongest affiliate content funnels are educational before they are commercial.

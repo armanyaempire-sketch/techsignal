@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: email automation small business, email workflow, welcome email sequence, email follow up
-sources: https://support.google.com/a/answer/81126
+sources: https://support.google.com/a/answer/81126|https://support.google.com/mail/answer/15263077?hl=en
 ---
 
 Email automation works best when every message has a clear reason to exist. Small businesses do not need a complicated system on day one. A few well-designed workflows can cover the most common customer moments while keeping the operation understandable.

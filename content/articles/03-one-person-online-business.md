@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: one person business, online business, creator business
-sources: https://www.sba.gov/business-guide/plan-your-business
+sources: https://www.sba.gov/business-guide/plan-your-business|https://www.sba.gov/business-guide/manage-your-business
 ---
 
 A one-person online business is an operation in which one owner controls the core decisions while software, automation and occasional outside help handle selected execution.
