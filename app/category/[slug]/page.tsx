@@ -79,7 +79,7 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
                   <div className="meta">{x.intent}</div>
                   <h3>{x.title}</h3>
                   <p>{x.description}</p>
-                  <Link prefetch={false} href={"/articles/"+x.slug+"/"} prefetch={false}>Read guide <span aria-hidden="true">→</span></Link>
+                  <Link prefetch={false} href={"/articles/"+x.slug+"/"}>Read guide <span aria-hidden="true">→</span></Link>
                 </article>)}
               </div>
               {stageIndex===0&&stageArticles.length>0&&<div className="category-mid-ads"><NativeBanner slot={c.slug+"-native-transition"} variant="horizontal"/><AdsterraBanner size="300x250" slot={c.slug+"-300-transition"}/></div>}
