@@ -3,6 +3,8 @@ import Link from "next/link";
 import {getAllArticles,getArticlesByCategory,getCategories} from "@/lib/articles";
 import {JsonLd} from "@/components/json-ld";
 import {ResponsiveLeaderboard} from "@/components/adsterra";
+import {ArticleVisual} from "@/components/article-visual";
+import {EditorialPicks} from "@/components/editor-picks";
 
 export const metadata:Metadata={
  title:"Practical Guides on AI, Online Business, Health & Wellness",
@@ -30,10 +32,18 @@ const topSlugs=[
  "12-home-workout-routine"
 ];
 
+const editorPickSlugs=[
+ "10-best-ai-small-business-tools",
+ "13-fitness-after-40",
+ "15-compare-beauty-products",
+ "22-affiliate-keyword-research-beginners"
+];
+
 export default function Home(){
  const allArticles=getAllArticles();
  const categories=getCategories();
  const topArticles=topSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(Boolean);
+ const editorPicks=editorPickSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(Boolean);
  const latestByCategory=categories.map(c=>({
   ...c,
   articles:getArticlesByCategory(c.slug).filter(a=>!topSlugs.includes(a.slug)).slice(0,3)
@@ -104,7 +114,7 @@ export default function Home(){
    <div className="container">
     <div className="section-header">
      <div>
-      <span className="eyebrow">Editor's picks</span>
+      <span className="eyebrow">Top reading</span>
       <h2>Top Articles</h2>
       <p className="section-intro">Five standout guides across all three GuideSignal desks, giving visitors an immediate path into the site's strongest topics.</p>
      </div>
@@ -112,6 +122,7 @@ export default function Home(){
     <div className="top-articles-grid">
      {topArticles.map((a,i)=>a&&(
       <article className={"top-article-card top-article-"+(i+1)} key={a.slug}>
+       <ArticleVisual slug={a.slug} category={a.category} title={a.title} variant="top"/>
        <div className="top-article-number">{String(i+1).padStart(2,"0")}</div>
        <div className="meta">{a.categoryName} · {a.stage}</div>
        <h3><Link prefetch={false} href={"/articles/"+a.slug+"/"}>{a.title}</Link></h3>
@@ -173,6 +184,7 @@ export default function Home(){
         <div className="latest-editorial-grid">
          {desk.articles.map(a=>(
           <article className="latest-editorial-card" key={a.slug}>
+           <ArticleVisual slug={a.slug} category={a.category} title={a.title} variant="card"/>
            <div className="meta">{a.stage} · {a.intent}</div>
            <h4><Link prefetch={false} href={"/articles/"+a.slug+"/"}>{a.title}</Link></h4>
            <p>{a.description}</p>
@@ -186,6 +198,8 @@ export default function Home(){
     </div>
    </div>
   </section>
+
+  <EditorialPicks articles={editorPicks}/>
 
   <section className="section section-soft">
    <div className="container seo-intro">

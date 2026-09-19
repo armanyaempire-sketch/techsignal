@@ -5,6 +5,7 @@ import {getArticlesByCategory,getCategories,getCategoryBySlug} from "@/lib/artic
 import {JsonLd} from "@/components/json-ld";
 import {AdsterraBanner,NativeBanner,ResponsiveLeaderboard} from "@/components/adsterra";
 import {AdRail} from "@/components/ad-rail";
+import {ArticleVisual} from "@/components/article-visual";
 
 export function generateStaticParams(){return getCategories().map(c=>({slug:c.slug}));}
 
@@ -76,6 +77,7 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
               </div>
               <div className="grid-3">
                 {stageArticles.map(x=><article className="card" key={x.slug}>
+                  <ArticleVisual slug={x.slug} category={x.category} title={x.title} variant="card"/>
                   <div className="meta">{x.intent}</div>
                   <h3><Link prefetch={false} href={"/articles/"+x.slug+"/"}>{x.title}</Link></h3>
                   <p>{x.description}</p>

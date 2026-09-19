@@ -12,13 +12,22 @@ export function Footer(){
      <Link prefetch={false} href="/category/womens-health-beauty/">Women's Health & Beauty</Link>
     </div>
    </div>
-   <div className="footer-links">
-    <Link prefetch={false} href="/about/">About</Link>
-    <Link prefetch={false} href="/editorial-policy/">Editorial Policy</Link>
-    <Link prefetch={false} href="/disclosure/">Disclosure</Link>
-    <Link prefetch={false} href="/privacy/">Privacy</Link>
-    <Link prefetch={false} href="/terms/">Terms</Link>
-    <Link prefetch={false} href="/contact/">Contact</Link>
+   <div>
+    <div className="eyebrow">Explore</div>
+    <div className="footer-links">
+     <Link prefetch={false} href="/about/">About</Link>
+     <Link prefetch={false} href="/contact/">Contact</Link>
+     <Link prefetch={false} href="/sitemap.xml">Sitemap</Link>
+    </div>
+   </div>
+   <div>
+    <div className="eyebrow">Trust & policies</div>
+    <div className="footer-links">
+     <Link prefetch={false} href="/editorial-policy/">Editorial Policy</Link>
+     <Link prefetch={false} href="/disclosure/">Disclosure</Link>
+     <Link prefetch={false} href="/privacy/">Privacy</Link>
+     <Link prefetch={false} href="/terms/">Terms</Link>
+    </div>
    </div>
   </div>
   <div className="container footer-bottom">GuideSignal publishes independent editorial content and may earn from qualifying affiliate links or advertising.</div>
