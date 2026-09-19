@@ -14,7 +14,7 @@ sources: https://www.cdc.gov/physical-activity-basics/guidelines/adults.html|htt
 
 A sustainable fitness routine is not the most ambitious plan you can write. It is the plan you can repeat when work gets busy, motivation drops or your schedule changes.
 
-The goal is to build a routine that is realistic enough to keep using and flexible enough to adjust. For most adults, the CDC recommends at least 150 minutes of moderate-intensity aerobic activity each week, or an equivalent combination of moderate and vigorous activity, plus muscle-strengthening activity on at least 2 days. The weekly total can be divided into smaller sessions. citeturn838277search0turn838277search1
+The goal is to build a routine that is realistic enough to keep using and flexible enough to adjust. For most adults, the CDC recommends at least 150 minutes of moderate-intensity aerobic activity each week, or an equivalent combination of moderate and vigorous activity, plus muscle-strengthening activity on at least 2 days. The weekly total can be divided into smaller sessions.
 
 ## Start with your real week
 
@@ -43,7 +43,7 @@ One of the best ways to protect consistency is to create a smaller version of yo
 
 For example, your standard session might be 30 minutes. Your minimum version could be a 10-minute walk, mobility session or short strength circuit. This is not a replacement for your long-term activity target; it is a way to keep the habit alive when circumstances change.
 
-The CDC notes that some physical activity is better than none, and that activity can be spread through the week. citeturn838277search1
+The CDC notes that some physical activity is better than none, and that activity can be spread through the week.
 
 ## Progress without chasing exhaustion
 
@@ -81,7 +81,7 @@ You might use a shorter workout when time is limited, reduce intensity during a 
 
 ## When to get professional guidance
 
-Exercise needs vary with age, health conditions, disabilities, injuries, medications and current fitness. The CDC recommends consulting a health professional about appropriate activity when chronic health conditions or other individual factors affect exercise planning. citeturn838277search6
+Exercise needs vary with age, health conditions, disabilities, injuries, medications and current fitness. The CDC recommends consulting a health professional about appropriate activity when chronic health conditions or other individual factors affect exercise planning.
 
 Pain that is severe, persistent or concerning should not be ignored simply to protect a workout schedule.
 

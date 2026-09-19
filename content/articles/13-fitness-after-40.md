@@ -14,7 +14,7 @@ sources: https://www.cdc.gov/physical-activity-basics/guidelines/adults.html|htt
 
 Fitness after 40 does not require a complicated routine. What changes for many people is the need to fit exercise around work, family responsibilities, travel, recovery and other parts of adult life.
 
-The basic goal remains regular movement. Current CDC guidance for adults includes at least 150 minutes of moderate-intensity aerobic activity each week, or an equivalent combination of moderate and vigorous activity, plus muscle-strengthening activity on at least 2 days. citeturn838277search0
+The basic goal remains regular movement. Current CDC guidance for adults includes at least 150 minutes of moderate-intensity aerobic activity each week, or an equivalent combination of moderate and vigorous activity, plus muscle-strengthening activity on at least 2 days.
 
 ## Stop planning for a perfect week
 
@@ -30,7 +30,7 @@ A balanced weekly routine can include both resistance work and aerobic activity.
 
 Strength work may include weights, resistance bands or suitable bodyweight exercises. Aerobic activity can include brisk walking, cycling, swimming or another activity that matches your ability.
 
-The CDC emphasizes that activity can be accumulated across the week rather than completed in a single block. citeturn838277search1
+The CDC emphasizes that activity can be accumulated across the week rather than completed in a single block.
 
 ## Keep exercise familiar
 
@@ -79,9 +79,9 @@ There is no need to make every workout harder. A routine that gradually becomes 
 
 People in their 40s and beyond can have very different starting points. Fitness history, current activity, injuries, chronic conditions, medications and other factors matter more than a single age cutoff.
 
-The CDC recommends discussing appropriate activity with a health professional when chronic conditions or other individual circumstances affect exercise planning. citeturn838277search6
+The CDC recommends discussing appropriate activity with a health professional when chronic conditions or other individual circumstances affect exercise planning.
 
-For adults 65 and older, CDC guidance also adds balance activities to the weekly mix. citeturn838277search8
+For adults 65 and older, CDC guidance also adds balance activities to the weekly mix.
 
 ## A simple weekly example
 

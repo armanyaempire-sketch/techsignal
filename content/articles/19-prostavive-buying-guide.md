@@ -32,7 +32,7 @@ Record:
 - warnings and precautions
 - manufacturer, distributor or seller information
 
-FDA consumer guidance explains that dietary supplement labels generally include a Supplement Facts panel and other required information. citeturn838277search3turn838277search7
+FDA consumer guidance explains that dietary supplement labels generally include a Supplement Facts panel and other required information.
 
 Do not assume an older review reflects the current formulation.
 
@@ -40,7 +40,7 @@ Do not assume an older review reflects the current formulation.
 
 A product description can contain strong language about prostate health, urinary comfort or other outcomes. Those statements should not be converted into a personal medical conclusion.
 
-The FTC explains that health-related advertising should be truthful, not misleading and supported by appropriate evidence. citeturn199151search0
+The FTC explains that health-related advertising should be truthful, not misleading and supported by appropriate evidence.
 
 A practical approach is to ask:
 
@@ -54,7 +54,7 @@ This distinction matters because evidence about one ingredient does not automati
 
 ## Check personal fit
 
-FDA guidance notes that supplements can interact with medicines and that some ingredients can affect people differently. It recommends talking with a health professional about whether a supplement is appropriate. citeturn838277search3turn838277search4
+FDA guidance notes that supplements can interact with medicines and that some ingredients can affect people differently. It recommends talking with a health professional about whether a supplement is appropriate.
 
 That is especially important when you take medication, have an existing condition or use multiple supplements.
 

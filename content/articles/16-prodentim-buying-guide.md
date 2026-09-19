@@ -25,7 +25,7 @@ Product details can change, so the current seller information should be treated 
 
 ## Check the Supplement Facts information
 
-FDA consumer guidance explains that dietary supplement labels generally include a Supplement Facts panel with serving size, number of servings and the listed dietary ingredients, along with other required label information. citeturn838277search3turn838277search7
+FDA consumer guidance explains that dietary supplement labels generally include a Supplement Facts panel with serving size, number of servings and the listed dietary ingredients, along with other required label information.
 
 For a product you are considering, record:
 
@@ -43,7 +43,7 @@ Do not assume that an ingredient proves a specific dental benefit.
 
 A supplement sales page may use language about oral health, gums, teeth or other outcomes. Those statements should be treated as seller claims unless independently supported.
 
-The FTC says health-related advertising claims should be truthful, not misleading and supported by appropriate scientific evidence. citeturn199151search0
+The FTC says health-related advertising claims should be truthful, not misleading and supported by appropriate scientific evidence.
 
 That means the responsible comparison is not "does the sales page make a strong promise?" It is "what exactly is being claimed, and what evidence is available for that specific claim?"
 
@@ -62,7 +62,7 @@ Save the current purchase terms if the offer includes recurring billing or a tim
 
 ## Consider personal fit and interactions
 
-FDA guidance notes that dietary supplements can have risks, can interact with medicines and can affect some people differently. It recommends discussing supplement use with a health professional who knows your circumstances. citeturn838277search3turn838277search4
+FDA guidance notes that dietary supplements can have risks, can interact with medicines and can affect some people differently. It recommends discussing supplement use with a health professional who knows your circumstances.
 
 That is particularly important if you take prescription or over-the-counter medicines, have a medical condition, are pregnant or breastfeeding, or are combining multiple supplements.
 

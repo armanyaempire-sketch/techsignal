@@ -51,7 +51,7 @@ A product page may contain several kinds of statements:
 
 Those are not interchangeable. A testimonial can describe someone's experience, but it does not automatically establish that the same outcome will happen for another buyer.
 
-The FTC says health-related advertising claims should have appropriate substantiation and should not be misleading. citeturn199151search0turn199151search8
+The FTC says health-related advertising claims should have appropriate substantiation and should not be misleading.
 
 ## 4. Compare total cost, not the headline price
 
@@ -78,7 +78,7 @@ Consider texture, application method, fragrance, storage, frequency of use, comp
 
 A theoretically useful product that you will not use consistently is a poor fit for your actual needs.
 
-AAD guidance also notes that using too many skincare products can increase irritation, and recommends focusing on a manageable routine. citeturn199151search9
+AAD guidance also notes that using too many skincare products can increase irritation, and recommends focusing on a manageable routine.
 
 ## 6. Read seller policies before checkout
 

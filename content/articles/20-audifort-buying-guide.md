@@ -29,7 +29,7 @@ The first question is not "does it work?" It is "what exactly am I buying?"
 
 If the product is a dietary supplement, review the current Supplement Facts panel and other label information.
 
-FDA consumer guidance explains that supplement labels generally provide serving information and listed dietary ingredients, along with other required label information. citeturn838277search3turn838277search7
+FDA consumer guidance explains that supplement labels generally provide serving information and listed dietary ingredients, along with other required label information.
 
 Record the current ingredients and directions rather than relying on an older article.
 
@@ -37,7 +37,7 @@ Record the current ingredients and directions rather than relying on an older ar
 
 A seller may claim that a product supports hearing, ear health, or another outcome. Those are claims to evaluate, not guaranteed facts.
 
-The FTC states that objective health-related claims should be truthful, not misleading and supported by appropriate evidence. citeturn199151search0
+The FTC states that objective health-related claims should be truthful, not misleading and supported by appropriate evidence.
 
 When reading an offer, ask whether the cited evidence is:
 
@@ -57,7 +57,7 @@ That means an online product purchase should not become a substitute for an appr
 
 ## Know when hearing changes need prompt care
 
-The National Institute on Deafness and Other Communication Disorders states that sudden deafness symptoms should be treated as a medical emergency and that prompt evaluation matters. citeturn199151search13
+The National Institute on Deafness and Other Communication Disorders states that sudden deafness symptoms should be treated as a medical emergency and that prompt evaluation matters.
 
 A product-purchase decision should never be used to delay appropriate medical attention for sudden or concerning hearing changes.
 

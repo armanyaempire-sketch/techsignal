@@ -40,7 +40,7 @@ Actual economics can depend on electricity rates, household usage, climate, equi
 
 Before accepting a savings estimate, compare the assumptions with your recent utility bills and the specific conditions of your property.
 
-The U.S. Department of Energy's consumer resources discuss home energy efficiency and energy audits as tools for understanding where energy is used and where improvements may be possible. citeturn199151search10
+The U.S. Department of Energy's consumer resources discuss home energy efficiency and energy audits as tools for understanding where energy is used and where improvements may be possible.
 
 ## 3. Calculate total project cost
 

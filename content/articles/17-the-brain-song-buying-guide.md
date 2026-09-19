@@ -38,7 +38,7 @@ The practical details can matter as much as the headline benefit.
 
 Statements about focus, memory, productivity or cognitive performance are claims that deserve scrutiny.
 
-The FTC advises that health-related advertising claims should be truthful, not misleading and backed by appropriate evidence. citeturn199151search0turn199151search3
+The FTC advises that health-related advertising claims should be truthful, not misleading and backed by appropriate evidence.
 
 A useful research process is to separate:
 

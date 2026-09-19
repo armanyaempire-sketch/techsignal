@@ -14,7 +14,7 @@ sources: https://www.cdc.gov/physical-activity-basics/guidelines/adults.html|htt
 
 A home workout works best when it fits the room, equipment and time you actually have. You do not need a large gym setup to create a useful routine, but you do need a clear structure.
 
-For adults, the CDC recommends at least 150 minutes of moderate-intensity aerobic activity each week, or an equivalent mix of moderate and vigorous activity, plus muscle-strengthening work on at least 2 days. Those minutes can be spread across the week and broken into smaller sessions. citeturn838277search0turn838277search1
+For adults, the CDC recommends at least 150 minutes of moderate-intensity aerobic activity each week, or an equivalent mix of moderate and vigorous activity, plus muscle-strengthening work on at least 2 days. Those minutes can be spread across the week and broken into smaller sessions.
 
 ## Decide what your home setup allows
 
@@ -94,7 +94,7 @@ A sturdy chair can be useful for some variations, but do not treat ordinary hous
 
 When time is limited, a short session can still be useful. You can perform a few strength movements followed by a brisk walk, or split activity into shorter periods across the day.
 
-The CDC explicitly notes that weekly activity can be divided into smaller chunks and that any activity is better than none. citeturn838277search1
+The CDC explicitly notes that weekly activity can be divided into smaller chunks and that any activity is better than none.
 
 The key is to keep a minimum routine available so busy days do not automatically become inactive days.
 
@@ -106,7 +106,7 @@ If a routine repeatedly leaves you too fatigued to complete the next planned ses
 
 ## Know when to seek guidance
 
-People with chronic conditions, injuries, disabilities or other health considerations may need individualized exercise advice. The CDC recommends talking with a health professional about suitable activity when chronic conditions or other personal factors affect exercise planning. citeturn838277search6
+People with chronic conditions, injuries, disabilities or other health considerations may need individualized exercise advice. The CDC recommends talking with a health professional about suitable activity when chronic conditions or other personal factors affect exercise planning.
 
 Do not use a generic workout article to self-manage a significant injury or unexplained pain.
 
