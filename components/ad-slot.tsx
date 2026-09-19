@@ -3,7 +3,7 @@ import Script from "next/script";
 import {useEffect,useState} from "react";
 import {hasOptionalConsent} from "./consent";
 
-const defaultAllowedHosts=[
+const allowedHosts=[
   "pagead2.googlesyndication.com",
   "googleads.g.doubleclick.net",
   "securepubads.g.doubleclick.net",
@@ -13,11 +13,7 @@ const defaultAllowedHosts=[
 function isAllowedAdScript(raw:string){
   try{
     const url=new URL(raw);
-    if(url.protocol!=="https:")return false;
-    const configured=(process.env.NEXT_PUBLIC_AD_ALLOWED_HOSTS||"")
-      .split(",").map(x=>x.trim().toLowerCase()).filter(Boolean);
-    const hosts=configured.length>0?configured:defaultAllowedHosts;
-    return hosts.some(host=>url.hostname===host||url.hostname.endsWith("."+host));
+    return url.protocol==="https:"&&allowedHosts.some(host=>url.hostname===host||url.hostname.endsWith("."+host));
   }catch{
     return false;
   }
