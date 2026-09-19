@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: hearing support, hearing health, hearing supplement, hearing product comparison, hearing support buying guide
-sources: https://www.nidcd.nih.gov/health/hearing-health|https://www.nidcd.nih.gov/health/sudden-deafness
+sources: https://www.nidcd.nih.gov/health/hearing-health|https://www.nidcd.nih.gov/health/sudden-deafness|https://www.nidcd.nih.gov/health/adult-hearing-health-care|https://www.nidcd.nih.gov/health/noise-induced-hearing-loss
 ---
 
 Hearing-support products can include supplements, devices, audio tools and other products that are marketed to people concerned about hearing or listening.
@@ -147,6 +147,20 @@ Record:
 **Return terms**
 
 **Health questions requiring professional advice**
+
+## Side-by-side worksheet
+
+| Factor | Product A | Product B |
+|---|---|---|
+| Product type | Supplement, device or other | Supplement, device or other |
+| Main function | What does it actually do? | What does it actually do? |
+| Evidence | Product-specific evidence | Product-specific evidence |
+| Compatibility | Devices, access or setup | Devices, access or setup |
+| Full cost | Purchase plus recurring costs | Purchase plus recurring costs |
+| Support | Seller/customer support | Seller/customer support |
+| Return/warranty | Current policy | Current policy |
+
+For a hearing-related product, product comparison and health assessment are separate tasks. NIDCD guidance identifies hearing tests and professional hearing care as relevant next steps for people who are concerned about hearing loss; sudden hearing changes require prompt medical attention.
 
 ## Bottom line
 
