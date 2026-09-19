@@ -5,17 +5,18 @@ import {JsonLd} from "@/components/json-ld";
 import {ResponsiveLeaderboard} from "@/components/adsterra";
 import {ArticleVisual} from "@/components/article-visual";
 import {EditorialPicks} from "@/components/editor-picks";
+import {SITE_URL} from "@/lib/site";
 
 export const metadata:Metadata={
  title:"Practical Guides on AI, Online Business, Health & Wellness",
  description:"GuideSignal publishes practical, source-aware guides on AI tools, online business, fitness, health, skincare and product decisions.",
- alternates:{canonical:"https://guidesignal.vercel.app/"},
+ alternates:{canonical:"/"},
  openGraph:{
   type:"website",
   siteName:"GuideSignal",
   title:"Practical Guides on AI, Online Business, Health & Wellness",
   description:"Practical, source-aware guides on AI, online business, fitness, health, skincare and product decisions.",
-  url:"https://guidesignal.vercel.app/"
+  url:"/"
  },
  twitter:{
   card:"summary",
@@ -48,14 +49,14 @@ export default function Home(){
   ...c,
   articles:getArticlesByCategory(c.slug).filter(a=>!topSlugs.includes(a.slug)).slice(0,3)
  }));
- const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
+ const siteUrl=SITE_URL;
  const data={
   "@context":"https://schema.org",
   "@type":"CollectionPage",
   name:"GuideSignal — Practical Guides for Smarter Choices",
   url:siteUrl,
   description:"Practical, source-aware guides on AI, online business, health, fitness, skincare and product decisions.",
-  isPartOf:{"@type":"WebSite",name:"GuideSignal",url:siteUrl}
+  isPartOf:{"@id":siteUrl+"#website"}
  };
  const organization={
   "@context":"https://schema.org",
