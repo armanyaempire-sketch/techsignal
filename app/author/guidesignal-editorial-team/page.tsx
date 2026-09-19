@@ -1,9 +1,10 @@
 import {JsonLd} from "@/components/json-ld";
+import {SITE_URL} from "@/lib/site";
 
 export const metadata={title:"GuideSignal Editorial Team",description:"Meet the GuideSignal Editorial Team and learn how articles are researched, reviewed and updated.",alternates:{canonical:"/author/guidesignal-editorial-team/"},openGraph:{type:"website",siteName:"GuideSignal",title:"GuideSignal Editorial Team",description:"How GuideSignal articles are researched, reviewed and updated.",url:"/author/guidesignal-editorial-team/"}};
 
 export default function Author(){
-  const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
+  const siteUrl=SITE_URL;
   const profile={
     "@context":"https://schema.org",
     "@type":"ProfilePage",
@@ -11,6 +12,7 @@ export default function Author(){
     "url":siteUrl+"/author/guidesignal-editorial-team/",
     "mainEntity":{
       "@type":"Organization",
+      "@id":SITE_URL+"#editorial-team",
       "name":"GuideSignal Editorial Team",
       "url":siteUrl+"/author/guidesignal-editorial-team/"
     }

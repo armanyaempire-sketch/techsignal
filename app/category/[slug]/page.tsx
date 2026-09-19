@@ -6,6 +6,7 @@ import {JsonLd} from "@/components/json-ld";
 import {AdsterraBanner,NativeBanner,ResponsiveLeaderboard} from "@/components/adsterra";
 import {AdRail} from "@/components/ad-rail";
 import {ArticleVisual} from "@/components/article-visual";
+import {SITE_URL} from "@/lib/site";
 
 export function generateStaticParams(){return getCategories().map(c=>({slug:c.slug}));}
 
@@ -13,7 +14,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {slug}=await params;
   const c=getCategoryBySlug(slug);
   if(!c)return{};
-  const base=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
+  const base=SITE_URL;
   const url=base+"/category/"+c.slug+"/";
   return{
     title:c.name,
@@ -29,7 +30,7 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
   if(!c)notFound();
 
   const articles=getArticlesByCategory(slug);
-  const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
+  const siteUrl=SITE_URL;
   const categoryUrl=siteUrl+"/category/"+c.slug+"/";
   const stages=(["TOFU","MOFU","BOFU"] as const).map(stage=>({stage,articles:articles.filter(a=>a.stage===stage)}));
   const itemList=articles.map((a,i)=>({
@@ -52,7 +53,7 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
     name:c.name,
     description:c.short,
     url:categoryUrl,
-    isPartOf:{"@type":"WebSite",name:"GuideSignal",url:siteUrl},
+    isPartOf:{"@id":siteUrl+"#website"},
     mainEntity:{"@type":"ItemList",itemListElement:itemList}
   };
 
