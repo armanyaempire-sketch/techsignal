@@ -75,7 +75,7 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?:"
    if(cancelled)return;
    const el=wrap.current;if(!el||el.dataset.loaded==="true"||el.dataset.loaded==="loading")return;
    el.dataset.loaded="loading";
-   const container=document.createElement("div");container.id="container-c4d6c7521da8806f322e86f7b566a2e0";el.appendChild(container);
+   const container=document.createElement("div");container.id="container-"+slot.replace(/[^a-zA-Z0-9_-]/g,"-");el.appendChild(container);
    await new Promise<void>((resolve,reject)=>{
     const script=document.createElement("script");script.async=true;script.setAttribute("data-cfasync","false");
     script.src="https://disregardpervertmural.com/c4d6c7521da8806f322e86f7b566a2e0/invoke.js";
