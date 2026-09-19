@@ -14,74 +14,175 @@ sources: https://developers.google.com/search/docs/fundamentals/seo-starter-guid
 
 SEO and paid traffic can both bring visitors, but they have different cost structures, time horizons and operating requirements.
 
-The decision is rarely "which channel is universally better?" A business should compare the channels against its margin, budget, conversion path and ability to create useful content.
+The useful question is not "Which channel is always better?" It is:
 
-## SEO: durable discoverability
+**Which acquisition method fits this business's audience, margin, budget, timeline and ability to create or optimize useful landing pages?**
+
+## SEO: investment in discoverability
 
 Search optimization focuses on helping pages become useful results for relevant queries.
 
-The advantage is compounding potential. A useful page can continue attracting impressions after publication without paying for every visit.
+The potential advantage is that a useful page can continue attracting search impressions after publication without paying for each individual visit.
 
-The tradeoff is uncertainty and time. Competitive topics may take substantial effort before producing meaningful search visibility.
+The tradeoffs include:
 
-Good SEO work includes:
+- Research and writing effort.
+- Technical work.
+- Competition.
+- Uncertain timing.
+- Ongoing maintenance.
 
-- choosing a real search problem,
-- creating useful original content,
-- organizing the site clearly,
-- linking related pages,
-- improving titles and descriptions,
-- keeping important information current.
+Good SEO work starts with a real search problem and a useful page.
 
-Our [AI marketing guide](/articles/01-ai-small-business-marketing/) shows how content can begin with a specific problem rather than a generic keyword.
+It also includes clear site organization, descriptive titles, relevant internal links and keeping important information current.
 
-## Paid traffic: controlled distribution
+Our [AI marketing guide](/articles/01-ai-small-business-marketing/) shows how content can start with a specific problem rather than a generic keyword.
 
-Paid traffic can produce exposure more quickly because the advertiser chooses the audience and budget.
+## Paid traffic: purchased distribution
 
-But the traffic has a direct marginal cost. When the campaign stops, the purchased exposure stops.
+Paid traffic can produce exposure more quickly because the advertiser controls budget, targeting and campaign timing.
 
-Paid traffic also requires reliable conversion measurement. A click may be cheap while the eventual customer is expensive, or the opposite may be true.
+But traffic has a direct cost.
 
-Useful numbers include ad spend, clicks, qualified visits, conversions and revenue.
+When the campaign stops, the purchased exposure stops as well unless the visit creates some longer-term asset such as a customer or subscriber.
 
-## Intent matters more than labels
+Paid traffic also requires reliable measurement. A cheap click is not necessarily a cheap customer.
 
-Search traffic can be informational or commercial. Paid traffic can also arrive at different intent levels.
+## Compare the economics
 
-For an affiliate publisher, phrases such as "best," "review," "alternative," "pricing" or "versus" may indicate stronger commercial investigation, but the actual query and page context still matter.
+Use the same funnel for both channels:
 
-Do not assume every high-intent keyword deserves a paid campaign. Test the economics first.
+**Visitor → useful page → conversion → revenue**
 
-## A practical mix
+For paid traffic, track:
 
-A small business can use both channels with different jobs.
+**Spend → clicks → qualified visits → conversions → revenue**
 
-SEO can build the information library and capture recurring search demand. Paid traffic can test an offer, support a promotion or reach a specific audience quickly.
+For SEO, track:
+
+**Content/optimization effort → impressions → clicks → qualified visits → conversions → revenue**
+
+The exact measurement system will vary, but both channels should be evaluated beyond raw traffic.
+
+## Intent matters more than the channel
+
+Search traffic can be informational, problem-solving or commercial.
+
+Paid traffic can arrive at different levels of intent too.
+
+For example:
+
+**"What is affiliate marketing?"** suggests learning.
+
+**"How to build an affiliate content funnel"** suggests implementation.
+
+**"Best AI affiliate tools"** suggests commercial investigation.
+
+The page should match the intent instead of forcing every visitor into the same offer.
+
+## Compare time horizon
+
+A useful planning table is:
+
+| Factor | SEO | Paid traffic |
+|---|---|---|
+| Initial spend | Content/technical effort | Direct media spend |
+| Speed of testing | Usually slower | Usually faster |
+| Traffic after stopping spend | May continue | Usually stops |
+| Targeting control | Indirect | Direct campaign controls |
+| Main risk | Time without visibility | Spending without profitable conversion |
+| Maintenance | Ongoing | Ongoing while campaigns run |
+
+Neither column is automatically better. The useful choice depends on the business model.
+
+## When SEO may fit
+
+SEO can be a useful part of the mix when a business:
+
+- Can create genuinely useful resources.
+- Has questions customers repeatedly search.
+- Can wait for organic visibility to develop.
+- Has enough margin to support content and maintenance.
+- Wants an information library that can support multiple journeys.
+
+It works best when content is created for users rather than solely to capture search traffic.
+
+## When paid traffic may fit
+
+Paid traffic can be useful when a business:
+
+- Needs controlled distribution for a campaign.
+- Has a page that already converts reasonably well.
+- Can measure the economics.
+- Wants to test a specific audience or offer.
+- Has budget for experimentation.
+
+The ability to spend more does not remove the need for a sound conversion path.
+
+## Use both deliberately
+
+A small business can use each channel for a different job.
+
+SEO can build the information library and capture recurring search demand.
+
+Paid traffic can test an offer, support a promotion or reach a defined audience quickly.
 
 A sensible workflow is:
 
-1. publish and improve useful organic content,
-2. learn which topics and offers convert,
-3. use paid traffic only where the economics are understood,
-4. keep tracking the full journey.
+1. Create and improve useful organic pages.
+2. Learn which topics and offers create qualified demand.
+3. Test paid campaigns where the conversion path is understood.
+4. Measure the full journey.
+5. Reallocate effort based on evidence.
 
 For the conversion side, see [how digital marketing funnels work](/articles/04-digital-marketing-funnels/).
 
-## Common mistakes
+## Common measurement mistakes
 
-### Comparing CPC with nothing else
+### Comparing CPC with revenue
 
-A low cost per click does not automatically mean a profitable campaign.
+A low cost per click says nothing about profitability by itself.
 
-### Treating SEO as free traffic
+Compare the eventual customer or qualified lead cost.
 
-SEO needs writing, research, technical work and ongoing maintenance.
+### Treating SEO as free
+
+SEO has labor costs: research, writing, editing, technical work and maintenance.
 
 ### Buying traffic before the page works
 
-A weak landing page can waste an otherwise well-targeted campaign.
+A poorly structured landing page can waste otherwise relevant paid traffic.
+
+### Measuring only last-click revenue
+
+Different channels can influence different parts of the customer journey. A single attribution view may not tell the whole story.
+
+## A simple break-even calculation
+
+For a paid campaign:
+
+**Maximum acceptable cost per customer = contribution per customer**
+
+For example, if a sale produces $100 of contribution after variable costs, paying $120 to acquire the customer is unsustainable under that simple model.
+
+For SEO, estimate:
+
+**Content investment ÷ qualified customers generated over the useful life of the content**
+
+This is imperfect, but it gives the business a comparable starting point.
+
+## A 90-day channel test
+
+A small business can structure learning in phases.
+
+**Days 1–30:** improve the landing page and measurement.
+
+**Days 31–60:** publish or optimize the highest-value organic pages and test a controlled paid campaign if appropriate.
+
+**Days 61–90:** compare qualified traffic, conversions, costs and maintenance effort.
+
+The objective is learning which parts of the acquisition system deserve more investment.
 
 ## Bottom line
 
-SEO is an investment in discoverability. Paid traffic is purchased distribution. Compare both using the business's actual conversion economics rather than treating either channel as a guaranteed shortcut.
+SEO is an investment in discoverability. Paid traffic is purchased distribution. Compare both using the same business outcomes—qualified visits, conversions, cost and revenue—rather than treating either channel as a guaranteed shortcut.

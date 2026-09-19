@@ -16,6 +16,8 @@ An AI content workflow should start with a human-defined brief and end with a hu
 
 The useful role of AI is to accelerate repeatable editorial work. The risky role is allowing a model to invent facts, publish unreviewed claims or produce large numbers of pages with little original value.
 
+The best workflow treats AI as one tool inside an editorial system rather than as the publisher.
+
 ## Step 1: define the search problem
 
 Write the real reader question before opening an AI tool.
@@ -27,10 +29,13 @@ Record:
 - related questions,
 - intended outcome,
 - funnel stage,
-- product relevance,
-- evidence requirements.
+- commercial relevance,
+- evidence requirements,
+- internal resources that genuinely help.
 
-This makes the content task concrete.
+This prevents a prompt from becoming the strategy.
+
+A useful brief should answer: **Who is this for, what do they need, and what should they be able to do after reading?**
 
 ## Step 2: research before drafting
 
@@ -44,53 +49,82 @@ Separate:
 
 **Seller claims:** statements that come from a commercial source and have not been independently verified.
 
-This distinction becomes especially important in health and product-review content.
+**Editorial recommendations:** practical guidance based on the available evidence and the reader's stated problem.
+
+This distinction is especially important in health and product-review content.
 
 ## Step 3: use AI for organization
 
 Good AI tasks include:
 
 - grouping related questions,
-- suggesting a section order,
+- suggesting section order,
 - identifying missing subtopics,
-- turning notes into an outline,
+- turning source notes into an outline,
 - proposing alternative explanations,
-- summarizing source material for human review.
+- summarizing source material for human verification,
+- creating checklists from an approved brief.
 
-The editor should still decide what belongs in the final article.
+The editor still decides what belongs in the final article.
 
 ## Step 4: draft in sections
 
-Draft one section at a time instead of asking for an entire article with no constraints.
+Draft one section at a time instead of requesting a complete article with no constraints.
 
 Give the model:
 
-- the audience,
-- the purpose of the section,
-- the facts it can use,
-- the claims it must avoid,
-- the desired length,
-- the internal links that are genuinely relevant.
-
-This reduces the chance that unsupported material silently becomes part of the article.
-
-## Step 5: verify
-
-Mark statements that require checking.
+- audience,
+- purpose,
+- approved facts,
+- claims to avoid,
+- desired structure,
+- desired length,
+- internal links that are genuinely relevant.
 
 For example:
 
-- product features,
-- current pricing,
-- health claims,
-- legal requirements,
-- percentages,
-- dates,
-- technical specifications.
+**Input:** three verified facts about a product category.
 
-Remove anything that cannot be supported.
+**Task:** explain what those facts mean for a beginner.
 
-## Step 6: add original value
+**Constraint:** do not make claims about outcomes that the supplied evidence does not establish.
+
+This gives the model a narrower job and makes review easier.
+
+## Step 5: verify every changeable claim
+
+Mark statements that require checking.
+
+Typical examples:
+
+- Product features.
+- Current pricing.
+- Health claims.
+- Legal requirements.
+- Percentages.
+- Dates.
+- Technical specifications.
+- Compatibility.
+- Subscription terms.
+
+Search and verify the source. Do not let a confident sentence become evidence simply because it was generated fluently.
+
+## Step 6: create an evidence trail
+
+Keep a research note alongside the article.
+
+| Article statement | Source | Status |
+|---|---|---|
+| Product feature | Official documentation | Verified |
+| Health statement | Professional source | Verified |
+| Pricing | Seller page | Verify before publication |
+| Editorial conclusion | Multiple facts | Editor judgment |
+
+This makes future maintenance faster.
+
+When a product changes, the editor can update the relevant claim without rereading the entire article from scratch.
+
+## Step 7: add original value
 
 The final article should contain something more useful than a generated summary.
 
@@ -101,20 +135,78 @@ That may be:
 - an implementation checklist,
 - a workflow,
 - examples,
-- a clear explanation of trade-offs.
+- a trade-off analysis,
+- a buyer worksheet,
+- a clear explanation of limitations.
 
-Google's current Search guidance emphasizes useful, people-first content and warns against scaled content created primarily to manipulate rankings.
+For example, "AI tools can save time" is generic. A table showing **task → AI step → human review → success measure** is more useful.
 
-## Step 7: publish and maintain
+## Step 8: use internal links deliberately
 
-Content quality is not fixed at publication.
+Internal links should solve the reader's next question.
 
-Search queries can reveal unanswered questions. Product pages can change. Pricing can change. Industry terminology can shift.
+A broad article can link to a more specific workflow. A workflow article can link to a comparison. A commercial page can link back to educational context.
+
+Avoid adding links only because an SEO checklist says there should be a certain number.
+
+## Step 9: run a quality gate before publication
+
+A practical pre-publish checklist:
+
+**Does the opening answer the main question?**
+
+**Are the important claims supported?**
+
+**Is the structure easy to scan?**
+
+**Is there information that is actually useful beyond a generic summary?**
+
+**Are affiliate relationships disclosed?**
+
+**Are seller claims clearly separated from independent information?**
+
+**Are internal links relevant?**
+
+**Are changeable details marked for future review?**
+
+Only then should the page be published.
+
+## Step 10: maintain instead of faking freshness
+
+Content quality continues after publication.
+
+Search queries can reveal unanswered questions. Product pages can change. Prices can change. Industry terminology can shift.
 
 A maintenance pass should update the page when a material detail changes rather than changing the date without a meaningful update.
 
-Our [affiliate content funnel guide](/articles/08-affiliate-content-funnel/) shows how individual articles can connect into a larger conversion path.
+Use a simple review trigger:
+
+**Material source change → review article**
+
+**Product/price change → review commercial sections**
+
+**Repeated search question → add useful explanation**
+
+**Factual correction → fix and document**
+
+## AI should not replace editorial responsibility
+
+Google's people-first guidance emphasizes useful content created for people rather than material produced primarily to manipulate search rankings.
+
+That means a publisher should be able to explain why a page exists and what value it provides even if search traffic were not guaranteed.
+
+Scale is an operational benefit. It is not a substitute for usefulness.
+
+## Practical operating model
+
+For a small site, a repeatable workflow can be:
+
+**Research → brief → outline → draft → fact-check → original value → internal links → quality gate → publish → monitor → update**
+
+Each step has a different purpose.
+
+Skipping the fact-check step creates accuracy risk. Skipping the original-value step creates generic content. Skipping maintenance makes changeable information stale.
 
 ## Bottom line
 
-AI should make editorial work more efficient while leaving research standards, factual responsibility and final judgment with the publisher. The best workflow produces better information, not simply more pages.
+AI should make editorial work more efficient while leaving research standards, factual responsibility and final judgment with the publisher. The strongest workflow produces better information, clearer decision support and easier maintenance—not simply more articles.

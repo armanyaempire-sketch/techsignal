@@ -14,11 +14,13 @@ sources: https://www.ftc.gov/business-guidance/resources/health-products-complia
 
 Audio products marketed for focus, concentration or "brain training" can vary widely. Some are primarily entertainment or relaxation products, while others make stronger performance or health-related claims.
 
-The practical way to compare them is to understand what the product actually delivers and separate that from the claims used to market it.
+The useful comparison starts by separating **what the product actually provides** from **what the seller says it will do**.
+
+This matters because a well-produced audio experience can still be a poor purchase if the access terms are inconvenient, the pricing is unclear or the marketing promise is much stronger than the supporting evidence.
 
 ## Identify the format
 
-Start by checking what you receive.
+Start by recording exactly what you receive.
 
 Is it:
 
@@ -28,117 +30,182 @@ Is it:
 - A mobile app?
 - A physical product?
 - A subscription?
+- A one-time course or program?
 
-A format that is difficult to access is a poor fit regardless of how attractive the marketing sounds.
+Then check how access works.
 
-## Understand what you are buying
+A product that requires a constant connection may be less useful for travel. A subscription can become more expensive over time than a one-time purchase. An app may require permissions or an account that a simple download would not.
 
-Record the actual components:
+The format is part of the product, not a minor detail.
 
-**Number of tracks or sessions**
+## Understand the actual components
 
-**Average session length**
+Create a basic inventory:
 
-**Playback requirements**
+| Feature | Product A | Product B |
+|---|---|---|
+| Number of tracks/sessions |  |  |
+| Average session length |  |  |
+| Streaming |  |  |
+| Offline access |  |  |
+| Supported devices |  |  |
+| Account required |  |  |
+| Updates included |  |  |
+| Subscription |  |  |
 
-**Offline access**
+If a seller does not make an important feature clear, mark it as **unverified** instead of assuming the most favorable answer.
 
-**Supported devices**
+## Separate features from performance claims
 
-**Account requirements**
-
-**Updates included**
-
-The clearer these details are, the easier it is to compare products.
-
-## Separate product features from performance claims
-
-A product can provide an audio experience without proving a specific cognitive outcome.
+A product can provide an audio experience without proving a specific cognitive or health outcome.
 
 When a page makes a performance claim, ask:
 
-**What outcome is being promised?**
+**What exact outcome is being promised?**
 
 **Is the evidence independent?**
 
-**Does it study this exact product or a broader technique?**
+**Does the evidence study this exact product?**
 
 **Is the population comparable to the intended user?**
 
-The FTC's health-products guidance emphasizes that health-related advertising claims should be truthful, not misleading, and supported by appropriate evidence.
+**What limitations are disclosed?**
 
-## Consider the use case
+The FTC's health-products guidance emphasizes that health-related advertising claims should be truthful, not misleading and supported by appropriate evidence.
 
-A person looking for background audio while working may need something different from someone looking for a structured training program.
+That does not mean every focus product is ineffective. It means a buyer should distinguish the existence of an audio product from proof of a particular outcome.
+
+## Identify the real use case
+
+A person looking for background audio while working may need something different from someone looking for a structured training experience.
 
 Ask:
 
 - How long are normal sessions?
-- Can the audio run while doing other tasks?
+- Can the audio play while doing another task?
+- Is active participation required?
 - Is there a recommended schedule?
-- Does the experience require active participation?
-- Can you stop and resume easily?
+- Can you stop and resume?
+- Is the product intended for a specific environment?
 
-A product should be evaluated against the actual problem it is supposed to solve.
+Write down the actual problem before comparing products.
 
-## Compare pricing carefully
+For example:
+
+**Problem:** "I want a quiet routine that helps me create a consistent work-start ritual."
+
+That is a clearer buying criterion than "I want better brain performance."
+
+## Check listening environment and usability
+
+Usability can matter more than a marketing feature.
+
+Think about:
+
+**Headphones:** Are they required?
+
+**Volume:** Are there clear instructions?
+
+**Environment:** Does the experience assume silence?
+
+**Session length:** Does it fit your schedule?
+
+**Playback:** Can you pause, resume and repeat easily?
+
+**Accessibility:** Are controls and content usable for your needs?
+
+A product that is theoretically appealing but awkward to use may have low practical value.
+
+## Compare price over the full access period
 
 Record:
 
-**One-time price**
+- One-time price.
+- Monthly or annual subscription.
+- Trial length.
+- Automatic renewal.
+- Access period.
+- Refund policy.
+- Taxes or additional fees.
 
-**Subscription price**
+Then calculate:
 
-**Trial terms**
+**Total first-year cost = upfront charges + recurring charges during year one**
 
-**Automatic renewal**
+A low trial price can still lead to a meaningful recurring cost if cancellation is missed.
 
-**Access period**
-
-**Refund policy**
-
-**Taxes or additional fees**
-
-A trial is not necessarily free in the long term. Confirm the renewal terms before purchasing.
+Always confirm current terms on the seller's checkout or terms page before purchasing.
 
 ## Check privacy and account requirements
 
-If a product requires an account or application, review what information is needed and what permissions are requested.
+If a product requires an account or app, review what information is requested.
 
-You should understand whether the product stores listening history, profile information or other account data.
+Questions include:
 
-## Be cautious with testimonials
+**What data is needed to create the account?**
 
-Testimonials describe individual experiences. They do not establish that the same result will occur for everyone.
+**Does the service store listening history or profile information?**
 
-Use testimonials as part of the seller's presentation, not as independent evidence.
+**What device permissions does the application request?**
 
-## A practical comparison table
+**Can the account be deleted?**
 
-For two products, record:
+Do not provide sensitive information simply because a product asks for it if that information is not clearly necessary for the service.
 
-**Format**
+## Treat testimonials as seller material
 
-**Access**
+Testimonials describe individual experiences. They do not establish that the same outcome will happen for everyone.
 
-**Session length**
+Use them to understand how the product is marketed, but do not treat them as a substitute for independent evidence.
 
-**Device support**
+Be especially careful when a testimonial is used to support a strong health or performance promise.
 
-**Subscription**
+## Compare evidence quality
 
-**Price**
+Use a simple evidence hierarchy for your notes:
 
-**Refund terms**
+**Exact-product evidence:** strongest relevance to a product-specific claim.
 
-**Claims**
+**Comparable independent evidence:** useful but may not establish what the exact product does.
 
-**Evidence**
+**General background evidence:** useful for understanding a technique or concept.
 
-**Privacy requirements**
+**Testimonials or seller summaries:** useful for understanding the marketing message, not proof on their own.
 
-This gives you a more useful comparison than star ratings alone.
+This distinction keeps a product review from quietly turning a general study into proof of a particular product.
+
+## A decision worksheet
+
+Before buying, write:
+
+**Target problem:** __________
+
+**Expected use:** __________
+
+**Format:** __________
+
+**Access period:** __________
+
+**Total cost:** __________
+
+**Renewal:** __________
+
+**Refund terms:** __________
+
+**Important claim:** __________
+
+**Evidence for that claim:** __________
+
+**Privacy questions:** __________
+
+**Reason to choose it over an alternative:** __________
+
+If you cannot complete the worksheet because basic information is unavailable, that uncertainty is itself part of the buying decision.
+
+## When to seek professional advice
+
+If a product is being considered because of persistent symptoms, a suspected medical issue or a concern that needs diagnosis or treatment, do not use a consumer buying guide as a replacement for professional care.
 
 ## Bottom line
 
-Compare focus and brain-training audio products by what you actually receive, how easily you can use them, the full cost and the evidence behind important claims. Treat stronger performance promises as claims that require careful checking rather than guarantees.
+Compare focus and brain-training audio products by what you actually receive, how easily you can use them, the complete cost and the evidence behind important claims. Treat stronger performance promises as claims that require checking, and mark missing information as uncertainty rather than assuming the seller's most favorable interpretation.
