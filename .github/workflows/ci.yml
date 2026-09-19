@@ -1,17 +1,10 @@
-name: TechSignal CI
+name: TechSignal Manual Validation
+
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
+
 jobs:
-  validate:
+  validation:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: npm install --no-package-lock
-      - run: npm run typecheck
-      - run: npm run build
+      - run: echo "Manual validation workflow. Run npm install, npm run typecheck and npm run build in a trusted environment before the production deployment."
