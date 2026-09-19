@@ -61,3 +61,5 @@
 .funnel-bridge p{margin:0;color:var(--muted);max-width:600px;font-size:14px}
 .funnel-bridge .button{flex-shrink:0}
 @media(max-width:700px){.funnel-bridge{flex-direction:column;align-items:stretch;gap:16px}.funnel-bridge .button{width:100%}}
+
+.adsterra-slot[data-ad-ready="false"]{display:none!important}

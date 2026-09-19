@@ -47,7 +47,7 @@ export function AdsterraBanner({size,slot,visibility="all"}:{size:BannerSize;slo
   return()=>{cancelled=true};
  },[active,visible,cfg.key,cfg.height,cfg.width]);
  if(!active||!visible)return null;
- return <div className={"ad-slot adsterra-slot adsterra-"+size} data-ad-format={size} data-ad-slot={slot}><span className="ad-label">Advertisement</span><div ref={mount} className="adsterra-mount"/></div>;
+ return <div className={"ad-slot adsterra-slot adsterra-"+size} data-ad-format={size} data-ad-slot={slot} data-ad-ready="false"><span className="ad-label">Advertisement</span><div ref={mount} className="adsterra-mount"/></div>;
 }
 
 type LeaderboardTier="mobile"|"tablet"|"desktop";
