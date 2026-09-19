@@ -1,7 +1,16 @@
+import type {Metadata} from "next";
 import Link from "next/link";
 import {getAllArticles,getCategories} from "@/lib/articles";
 import {AdStack} from "@/components/ad-stack";
 import {JsonLd} from "@/components/json-ld";
+
+export const metadata:Metadata={
+  title:"Practical Guides for Smarter Choices",
+  description:"Research-aware guides on AI, online business, health, fitness and women's wellness.",
+  alternates:{canonical:"https://guidesignal.vercel.app/"},
+  openGraph:{type:"website",siteName:"GuideSignal",title:"Practical Guides for Smarter Choices",description:"Research-aware guides on AI, online business, health, fitness and women's wellness.",url:"https://guidesignal.vercel.app/"},
+  twitter:{card:"summary",title:"Practical Guides for Smarter Choices",description:"Research-aware guides on AI, online business, health, fitness and women's wellness."}
+};
 
 export default function Home(){
   const a=getAllArticles().slice(0,9),c=getCategories();
