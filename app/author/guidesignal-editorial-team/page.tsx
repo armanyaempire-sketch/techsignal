@@ -1,33 +1,27 @@
 import {JsonLd} from "@/components/json-ld";
-import {SITE_URL} from "@/lib/site";
+import {SITE_URL,SITE_NAME,EDITORIAL_REVIEW_DATE,PUBLIC_REPOSITORY} from "@/lib/site";
 import {getEditorialDesks} from "@/lib/editorial";
 
 export const metadata={
  title:"GuideSignal Editorial Team",
  description:"Meet the GuideSignal Editorial Team, its research desks, source standards, health-content safeguards and correction process.",
  alternates:{canonical:"/author/guidesignal-editorial-team/"},
- openGraph:{
-  type:"website",
-  siteName:"GuideSignal",
-  title:"GuideSignal Editorial Team",
-  description:"How GuideSignal researches, reviews and updates practical guides.",
-  url:"/author/guidesignal-editorial-team/"
- }
+ openGraph:{type:"website",siteName:SITE_NAME,title:"GuideSignal Editorial Team",description:"How GuideSignal researches, reviews and updates practical guides.",url:"/author/guidesignal-editorial-team/"}
 };
 
 export default function Author(){
- const siteUrl=SITE_URL;
  const desks=getEditorialDesks();
  const team={
   "@context":"https://schema.org",
   "@type":"ProfilePage",
   name:"GuideSignal Editorial Team",
-  url:siteUrl+"/author/guidesignal-editorial-team/",
+  url:SITE_URL+"/author/guidesignal-editorial-team/",
+  dateModified:"2026-09-20",
   mainEntity:{
    "@type":"Organization",
    "@id":SITE_URL+"#editorial-team",
    name:"GuideSignal Editorial Team",
-   url:siteUrl+"/author/guidesignal-editorial-team/",
+   url:SITE_URL+"/author/guidesignal-editorial-team/",
    description:"Editorial research team covering AI, online business, health, fitness, skincare and women's wellness."
   }
  };
@@ -50,10 +44,12 @@ export default function Author(){
   <h2>Health and wellness safeguards</h2>
   <p>Health and wellness pages are general educational information, not individualized medical advice. We avoid guaranteed outcomes, fabricated testimonials and unsupported medical claims, and we prefer recognized public-health, government or professional sources where relevant.</p>
 
-  <h2>Updates and corrections</h2>
-  <p>Pages can be updated when source material, product terms, prices or search intent changes. Material corrections should be reflected in the page and its updated date. Readers can use the Contact page or the project repository workflow to flag factual issues while a public contact address is being configured.</p>
+  <h2>Corrections</h2>
+  <p>Readers can report factual issues through the <a href="/contact/">Contact page</a>. The current public workflow uses GitHub issues; avoid posting private or sensitive information in a public issue.</p>
 
   <h2>What we do not claim</h2>
   <p>GuideSignal does not imply professional licensure, clinical treatment, personal product testing or guaranteed business results unless a page explicitly documents a verifiable basis for such a statement.</p>
- </div></div></>;
+
+  <p className="muted">Editorial profile reviewed: {EDITORIAL_REVIEW_DATE}. Public source repository: <a href={PUBLIC_REPOSITORY} target="_blank" rel="noopener noreferrer">GitHub / techsignal</a>.</p>
+ </div></div>;
 }
