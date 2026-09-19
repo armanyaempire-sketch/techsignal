@@ -22,10 +22,10 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 }
 export default async function ArticlePage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)notFound();
- const related=getRelatedArticles(a,4);const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";const articleUrl=siteUrl+"/articles/"+a.slug+"/";\n const totalWords=a.body.trim().split(/\\s+/).filter(Boolean).length;
+ const related=getRelatedArticles(a,4);const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";const articleUrl=siteUrl+"/articles/"+a.slug+"/";
+ const totalWords=a.body.trim().split(/\s+/).filter(Boolean).length;
  const articleSchema={"@context":"https://schema.org","@type":"Article","headline":a.title,"description":a.description,"datePublished":a.date,"dateModified":a.updated,"inLanguage":"en","wordCount":totalWords,"isAccessibleForFree":true,"mainEntityOfPage":{"@type":"WebPage","@id":articleUrl},"author":{"@type":"Organization","name":"GuideSignal Editorial Team","url":siteUrl+"/author/guidesignal-editorial-team/"},"publisher":{"@type":"Organization","@id":siteUrl+"#organization","name":"GuideSignal","url":siteUrl},"articleSection":a.categoryName,"keywords":a.keywords};
  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":a.categoryName,"item":siteUrl+"/category/"+a.category+"/"},{"@type":"ListItem","position":3,"name":a.title,"item":articleUrl}]};
- const totalWords=a.body.trim().split(/\s+/).filter(Boolean).length;
  const minutes=Math.max(1,Math.round(totalWords/220));
  const articleHtml=markdownToHtml(a.body);
  return <><JsonLd data={[articleSchema,breadcrumb]}/><ReadingProgress/><div className="breadcrumbs"><Link prefetch={false} href="/">Home</Link><span>/</span><Link prefetch={false} href={"/category/"+a.category+"/"}>{a.categoryName}</Link><span>/</span><span aria-current="page">{a.title}</span></div>
