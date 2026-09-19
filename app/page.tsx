@@ -1,4 +1,5 @@
 import type {Metadata} from "next";
+import type {Article} from "@/lib/articles";
 import Link from "next/link";
 import {getAllArticles,getArticlesByCategory,getCategories} from "@/lib/articles";
 import {JsonLd} from "@/components/json-ld";
@@ -43,8 +44,9 @@ const editorPickSlugs=[
 export default function Home(){
  const allArticles=getAllArticles();
  const categories=getCategories();
- const topArticles=topSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(Boolean);
- const editorPicks=editorPickSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(Boolean);
+ const isArticle=(article:Article|undefined):article is Article=>Boolean(article);
+ const topArticles=topSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(isArticle);
+ const editorPicks=editorPickSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(isArticle);
  const latestByCategory=categories.map(c=>({
   ...c,
   articles:getArticlesByCategory(c.slug).filter(a=>!topSlugs.includes(a.slug)).slice(0,3)
