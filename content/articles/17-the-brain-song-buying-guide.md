@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: The Brain Song, focus audio, brain training audio, concentration products, focus product
 offerKey: brainsongx
-sources: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
+sources: https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance|https://www.nia.nih.gov/health/exercise-and-physical-activity/health-benefits-exercise-and-physical-activity
 ---
 
 Audio products marketed for focus, concentration or mental performance can be difficult to compare because product format and marketing claims are sometimes mixed together.
@@ -116,6 +116,26 @@ This article does not claim that The Brain Song will improve memory, concentrati
 ## Continue your research
 
 For a related topic, see our [AI content workflow guide](/articles/07-ai-content-workflow/). For a related topic, see our [AI affiliate tools comparison](/articles/09-best-ai-affiliate-tools/). For a related topic, see our [affiliate content funnel guide](/articles/08-affiliate-content-funnel/).
+
+## A practical comparison matrix
+
+For any two focus or audio products, compare the same decision fields.
+
+| Factor | Product A | The Brain Song / Product B |
+|---|---|---|
+| Format | Audio, app, course or other | Confirm current offer |
+| Access period | One-time, subscription or other | Confirm current terms |
+| Intended use | Define the specific goal | Define the specific goal |
+| Evidence | Product-specific evidence | Product-specific evidence |
+| Required equipment | Device, headphones or speakers | Confirm current requirements |
+| Total cost | Include renewals and extras | Include renewals and extras |
+| Refund/cancellation | Current policy | Current policy |
+
+A research matrix helps separate a product's actual deliverables from broad performance language.
+
+## What independent health guidance adds
+
+Focus and cognitive performance are not determined by a single commercial product. Broader health factors such as sleep, physical activity, stress and routine can also matter. For example, the National Institute on Aging notes that physical activity supports mental and emotional health and may benefit aspects of cognitive function. This is background health information, not evidence that a specific commercial audio product works.
 
 ## Bottom line
 
