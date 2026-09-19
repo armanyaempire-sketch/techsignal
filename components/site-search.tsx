@@ -1,14 +1,13 @@
 "use client";
 
-import {FormEvent,useMemo,useState} from "react";
-import {useRouter,useSearchParams} from "next/navigation";
+import {FormEvent,useEffect,useMemo,useState} from "react";
+import {useRouter} from "next/navigation";
 import type {Article} from "@/lib/articles";
 
 export function SiteSearch({articles,compact=false}:{articles?:Article[];compact?:boolean}){
  const router=useRouter();
- const params=useSearchParams();
- const initial=params.get("q")||"";
- const [query,setQuery]=useState(initial);
+ const [query,setQuery]=useState("");
+ useEffect(()=>{if(typeof window!=="undefined"){setQuery(new URLSearchParams(window.location.search).get("q")||"");}},[]);
  const submit=(event:FormEvent<HTMLFormElement>)=>{
   event.preventDefault();
   const value=query.trim();
