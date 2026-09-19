@@ -137,6 +137,41 @@ A research matrix helps separate a product's actual deliverables from broad perf
 
 Focus and cognitive performance are not determined by a single commercial product. Broader health factors such as sleep, physical activity, stress and routine can also matter. For example, the National Institute on Aging notes that physical activity supports mental and emotional health and may benefit aspects of cognitive function. This is background health information, not evidence that a specific commercial audio product works.
 
+## Purchase-terms audit
+
+GuideSignal is not independently publishing a current price for The Brain Song because the merchant checkout could not be independently verified during this review. Do not copy an old sale price or third-party screenshot into the article and present it as current.
+
+Record these fields immediately before purchase:
+
+| Field | What to confirm |
+|---|---|
+| Initial price | Exact current checkout amount |
+| Access | What content is included |
+| Access period | Lifetime, fixed period or subscription |
+| Renewal | Whether another charge occurs |
+| Add-ons | Optional or preselected extras |
+| Refund | Current policy and procedure |
+| Support | Current contact method |
+
+## Compare product purchase with simpler alternatives
+
+Before buying a focus product, define the problem narrowly. A person seeking better concentration may also choose to improve sleep routine, reduce interruptions, use structured work intervals, add physical activity or change the work environment.
+
+Those alternatives do not prove that an audio product cannot help. They simply prevent a buyer from treating one commercial product as the only possible answer.
+
+## Decision rule for cognitive-product claims
+
+A strong purchase case requires three separate answers:
+
+**What do I actually receive?**
+
+**What evidence applies to the exact promise?**
+
+**What will the complete purchase cost me?**
+
+If one answer is unavailable, mark that uncertainty explicitly.
+
+
 ## Bottom line
 
 Compare the actual format, access requirements, claims, evidence, total cost and seller terms. Focus on whether the current offer fits your specific use case instead of relying on a broad promise about mental performance.

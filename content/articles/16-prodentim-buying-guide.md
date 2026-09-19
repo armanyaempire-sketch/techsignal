@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: ProDentim, oral care supplement, dental supplement, ProDentim review, oral health buying guide
 offerKey: prodentim
-sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/food/information-consumers-using-dietary-supplements/questions-and-answers-dietary-supplements|https://www.nccih.nih.gov/health/dietary-and-herbal-supplements
+sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/food/information-consumers-using-dietary-supplements/questions-and-answers-dietary-supplements|https://www.nccih.nih.gov/health/dietary-and-herbal-supplements|https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
 ---
 
 When an online product is marketed for oral health, the useful question is not simply whether the sales page sounds convincing. A better approach is to research what the product is, what the seller says, what the current purchase terms are and what the product cannot establish.
@@ -119,6 +119,41 @@ The table is intentionally a research worksheet. It avoids pretending that a pri
 ## Questions to ask before checkout
 
 A useful final check is: What exactly arrives, what does the current label say, what evidence supports the important claims, what will the complete purchase cost be, and what happens if you want to cancel or request a refund?
+
+## Purchase-terms audit: do not use stale numbers
+
+GuideSignal is not independently publishing a current ProDentim price in this article because the merchant checkout terms could not be independently verified during this review. That is deliberate: a buyer should not mistake an old price, search snippet or another site's screenshot for a current offer.
+
+Before clicking through, record:
+
+| Field | Check at purchase time |
+|---|---|
+| Price | Exact amount shown at checkout |
+| Quantity | Bottles/servings included |
+| Shipping | Included or additional |
+| Billing | One-time or recurring |
+| Refund | Current window and return requirements |
+| Support | Current seller contact method |
+| Label | Current Supplement Facts and directions |
+
+## Compare with non-supplement alternatives
+
+The relevant alternative to a supplement is not necessarily another supplement. Depending on the buyer's concern, alternatives can include routine oral hygiene, a dental professional's evaluation, or asking a clinician/dentist about a specific symptom before purchasing a product.
+
+That comparison keeps the commercial decision separate from the health-care decision.
+
+## Decision framework
+
+Use three filters:
+
+**1. Product fit:** Is the product actually appropriate for the stated use?
+
+**2. Evidence fit:** Is there credible support for the exact outcome being discussed?
+
+**3. Transaction fit:** Are price, shipping, refund and billing terms clear enough to accept?
+
+If any one of those remains unclear, the correct status is **needs verification**, not "best value."
+
 
 ## Bottom line
 

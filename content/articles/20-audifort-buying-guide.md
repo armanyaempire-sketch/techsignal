@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: Audifort, hearing support, hearing supplement, Audifort review, hearing health buying guide
 offerKey: audifort
-sources: https://www.nidcd.nih.gov/health/hearing-health|https://www.nidcd.nih.gov/health/sudden-deafness|https://www.nidcd.nih.gov/health/adult-hearing-health-care
+sources: https://www.nidcd.nih.gov/health/hearing-health|https://www.nidcd.nih.gov/health/sudden-deafness|https://www.nidcd.nih.gov/health/adult-hearing-health-care|https://audifort.com/d/order-now.php|https://audifort.com/
 ---
 
 Online hearing-support products often use broad promises. A better buying process starts with the actual product details, the current label and a clear understanding of what an online offer can and cannot establish.
@@ -130,6 +130,53 @@ When comparing Audifort with another hearing-support product, record the same fa
 | Refund/warranty | Current policy | Current policy |
 
 NIDCD consumer guidance distinguishes hearing-care needs from product shopping. For ongoing hearing difficulty, hearing-care professionals can help identify the cause and appropriate options; a product page should not be used as a substitute for that assessment.
+
+## Current seller pricing snapshot
+
+The Audifort official order page currently displays three purchase options: **2 bottles / 60 days at $79 per bottle ($158 total plus shipping)**, **3 bottles / 90 days at $69 per bottle ($207 total with free U.S. shipping shown)**, and **6 bottles / 180 days at $49 per bottle ($294 total with free U.S. shipping shown)**. The same page states a **90-day money-back guarantee**. Audifort's official homepage says the purchase is a one-time payment with no future payments required. These are seller-stated terms captured during this review and can change, so the checkout page remains the source of truth.
+
+| Audifort option | Seller-displayed price | Stated period | Buyer checks |
+|---|---:|---:|---|
+| 2 bottles | $158 total + shipping | 60 days | Verify shipping and final checkout total |
+| 3 bottles | $207 total | 90 days | Confirm free-shipping eligibility at checkout |
+| 6 bottles | $294 total | 180 days | Confirm final shipping/terms at checkout |
+
+These prices should be treated as a dated seller snapshot, not a permanent GuideSignal price guarantee.
+
+## Cost-per-day view
+
+A simple way to compare bundle economics is to divide the seller-displayed total by the stated period:
+
+| Option | Approx. seller-displayed cost/day |
+|---|---:|
+| 2 bottles / 60 days | $2.63/day plus shipping |
+| 3 bottles / 90 days | $2.30/day |
+| 6 bottles / 180 days | $1.63/day |
+
+This calculation only describes the seller's displayed bundle pricing. It does not establish that a larger package is medically or financially better for an individual buyer.
+
+## Questions before choosing a bundle
+
+Ask:
+
+**Do I actually want 60, 90 or 180 days of product?**
+
+**Is the shipping charge different for the smaller option?**
+
+**Is the current offer still one-time billing?**
+
+**What exactly must be done to request the 90-day refund?**
+
+**Is the product appropriate for the hearing concern I am trying to address?**
+
+The official seller page also presents testimonials and scientific references. GuideSignal does not treat those seller materials as independent proof of an individual hearing outcome.
+
+## Alternatives to an online supplement purchase
+
+For ongoing hearing difficulty, alternatives include a hearing evaluation and discussion of appropriate hearing-care options. For sudden hearing changes, NIDCD guidance supports prompt medical attention rather than delaying care for a consumer product purchase.
+
+The commercial question and the hearing-care question should remain separate.
+
 
 ## Bottom line
 

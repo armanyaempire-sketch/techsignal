@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: ProstaVive, prostate health supplement, men's health supplement, ProstaVive review, supplement buying guide
 offerKey: prostavive
-sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/drugs/resources-drugs/drug-interactions-what-you-should-know|https://www.nccih.nih.gov/health/mens-health
+sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/drugs/resources-drugs/drug-interactions-what-you-should-know|https://www.nccih.nih.gov/health/mens-health|https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
 ---
 
 Shopping for a men's-health supplement requires more than reading the headline on a sales page. A responsible buying process checks the current label, the seller's claims, personal fit, total cost and the terms of the transaction.
@@ -132,6 +132,38 @@ Use the same fields for ProstaVive and any alternative rather than comparing mar
 | Refund policy | Current seller policy | Current seller policy |
 
 The NIH's NCCIH notes that many supplements marketed for men's health have not been shown to be safe or effective, and evidence can differ by ingredient and condition. That is one reason a finished-product claim should not be treated as proven merely because an ingredient has been studied.
+
+## Purchase-terms audit: verify at checkout
+
+GuideSignal is not publishing a current ProstaVive price here because the merchant checkout terms could not be independently verified during this review. A stale price would be less useful than an explicit verification instruction.
+
+Before purchase, fill this in from the current seller page:
+
+| Field | Current value to record |
+|---|---|
+| Order price |  |
+| Bottles/servings |  |
+| Shipping |  |
+| Taxes/fees |  |
+| Billing frequency | One-time / recurring / unclear |
+| Renewal amount |  |
+| Refund window |  |
+| Cancellation method |  |
+
+## Compare the purchase with the health-care question
+
+If the reason for considering a prostate-health supplement is a symptom, the alternative may be medical evaluation rather than another supplement.
+
+A useful buyer question is:
+
+**Am I trying to choose a product, or am I actually trying to understand a symptom?**
+
+Those are different decisions. An affiliate buying guide can help with product research but should not substitute for appropriate clinical assessment.
+
+## Buyer decision rule
+
+Proceed to commercial review only when the product identity, current label, major claims, total cost and refund/billing terms are clear. Otherwise, mark the offer as **needs verification** and continue researching.
+
 
 ## Bottom line
 
