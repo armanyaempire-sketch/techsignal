@@ -3,8 +3,6 @@ import Link from "next/link";
 import {notFound} from "next/navigation";
 import {getArticlesByCategory,getCategories,getCategoryBySlug} from "@/lib/articles";
 import {JsonLd} from "@/components/json-ld";
-import {AdsterraBanner,NativeBanner,ResponsiveLeaderboard} from "@/components/adsterra";
-import {AdRail} from "@/components/ad-rail";
 import {ArticleVisual} from "@/components/article-visual";
 import {SITE_URL} from "@/lib/site";
 
@@ -60,7 +58,6 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
   return <>
     <JsonLd data={[breadcrumb,collection]}/>
     <div className="breadcrumbs"><Link prefetch={false} href="/">Home</Link><span>/</span><span aria-current="page">{c.name}</span></div>
-    <div className="container category-ad-top"><ResponsiveLeaderboard slot={c.slug+"-leaderboard"}/><AdsterraBanner size="468x60" slot={c.slug+"-468-top"} visibility="desktop"/></div>
     <section className="section">
       <div className="container category-hub-layout">
         <main className="category-hub-main">
@@ -84,16 +81,13 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
                   <p>{x.description}</p>
                 </article>)}
               </div>
-              {stageIndex===0&&stageArticles.length>0&&<div className="category-mid-ads"><NativeBanner slot={c.slug+"-native-transition"} variant="horizontal"/></div>}
             </section>
           ))}
 
           {!articles.length&&<div className="notice">This desk is in the editorial queue.</div>}
 
-          {articles.length>0&&<div className="category-end-ads"><NativeBanner slot={c.slug+"-native-end"} variant="horizontal"/><AdsterraBanner size="468x60" slot={c.slug+"-468-end"} visibility="desktop"/></div>}
         </main>
 
-        <aside className="category-hub-rail"><AdRail prefix={c.slug+"-rail"}/></aside>
       </div>
     </section>
   </>;
