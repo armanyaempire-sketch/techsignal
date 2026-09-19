@@ -3,10 +3,30 @@ import Script from "next/script";
 import {useEffect,useState} from "react";
 import {hasOptionalConsent} from "./consent";
 
+const defaultAllowedHosts=[
+  "pagead2.googlesyndication.com",
+  "googleads.g.doubleclick.net",
+  "securepubads.g.doubleclick.net",
+  "www.googletagservices.com"
+];
+
+function isAllowedAdScript(raw:string){
+  try{
+    const url=new URL(raw);
+    if(url.protocol!=="https:")return false;
+    const configured=(process.env.NEXT_PUBLIC_AD_ALLOWED_HOSTS||"")
+      .split(",").map(x=>x.trim().toLowerCase()).filter(Boolean);
+    const hosts=configured.length>0?configured:defaultAllowedHosts;
+    return hosts.some(host=>url.hostname===host||url.hostname.endsWith("."+host));
+  }catch{
+    return false;
+  }
+}
+
 export function AdSlot({slot,scriptUrl,zone}:{slot:string;scriptUrl?:string;zone?:string}){
   const [ok,setOk]=useState(false);
   useEffect(()=>setOk(hasOptionalConsent()),[]);
-  if(!ok||!scriptUrl||!zone)return null;
+  if(!ok||!scriptUrl||!zone||!isAllowedAdScript(scriptUrl))return null;
   return <div className="ad-slot" data-slot={slot} data-zone={zone}>
     <span className="ad-label">Advertisement</span>
     <div id={zone} />
