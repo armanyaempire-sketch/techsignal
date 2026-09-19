@@ -1,6 +1,88 @@
+import type {Metadata} from "next";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {getArticlesByCategory,getCategories,getCategoryBySlug} from "@/lib/articles";
+import {JsonLd} from "@/components/json-ld";
+
 export function generateStaticParams(){return getCategories().map(c=>({slug:c.slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const c=getCategoryBySlug(slug);return{title:c?.name??"Category",description:c?.short??""};}
-export default async function CategoryPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const c=getCategoryBySlug(slug);if(!c)notFound();const a=getArticlesByCategory(slug);return <><div className="breadcrumbs"><Link href="/">Home</Link> / {c.name}</div><section className="section"><div className="container"><span className="eyebrow">Content desk</span><h1 style={{fontSize:"clamp(38px,6vw,58px)",marginBottom:14}}>{c.name}</h1><p className="muted" style={{maxWidth:760,fontSize:18}}>{c.short}</p><div className="grid-3">{a.map(x=><article className="card" key={x.slug}><div className="meta">{x.stage} · {x.intent}</div><h3>{x.title}</h3><p>{x.description}</p><Link href={"/articles/"+x.slug+"/"}>Read guide →</Link></article>)}</div>{!a.length&&<div className="notice">This desk is in the editorial queue.</div>}</div></section></>}
+
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
+  const {slug}=await params;
+  const c=getCategoryBySlug(slug);
+  if(!c)return{};
+  const base=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
+  const url=base+"/category/"+c.slug+"/";
+  return{
+    title:c.name,
+    description:c.short,
+    alternates:{canonical:url},
+    openGraph:{type:"website",siteName:"GuideSignal",title:c.name,description:c.short,url}
+  };
+}
+
+export default async function CategoryPage({params}:{params:Promise<{slug:string}>}){
+  const {slug}=await params;
+  const c=getCategoryBySlug(slug);
+  if(!c)notFound();
+
+  const articles=getArticlesByCategory(slug);
+  const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
+  const categoryUrl=siteUrl+"/category/"+c.slug+"/";
+  const stages=(["TOFU","MOFU","BOFU"] as const).map(stage=>({stage,articles:articles.filter(a=>a.stage===stage)}));
+  const itemList=articles.map((a,i)=>({
+    "@type":"ListItem",
+    position:i+1,
+    url:siteUrl+"/articles/"+a.slug+"/",
+    name:a.title
+  }));
+  const breadcrumb={
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    itemListElement:[
+      {"@type":"ListItem",position:1,name:"Home",item:siteUrl+"/"},
+      {"@type":"ListItem",position:2,name:c.name,item:categoryUrl}
+    ]
+  };
+  const collection={
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    name:c.name,
+    description:c.short,
+    url:categoryUrl,
+    isPartOf:{"@type":"WebSite",name:"GuideSignal",url:siteUrl},
+    mainEntity:{"@type":"ItemList",itemListElement:itemList}
+  };
+
+  return <>
+    <JsonLd data={[breadcrumb,collection]}/>
+    <div className="breadcrumbs"><Link href="/">Home</Link><span>/</span><span aria-current="page">{c.name}</span></div>
+    <section className="section">
+      <div className="container">
+        <span className="eyebrow">Content desk</span>
+        <h1 style={{fontSize:"clamp(38px,6vw,58px)",marginBottom:14}}>{c.name}</h1>
+        <p className="muted" style={{maxWidth:760,fontSize:18}}>{c.short}</p>
+
+        {stages.map(({stage,articles:stageArticles})=>stageArticles.length>0&&(
+          <section className="section" key={stage}>
+            <div className="section-header">
+              <div>
+                <span className="eyebrow">{stage}</span>
+                <h2>{stage==="TOFU"?"Learn the basics":stage==="MOFU"?"Solve the problem":"Compare before you buy"}</h2>
+              </div>
+            </div>
+            <div className="grid-3">
+              {stageArticles.map(x=><article className="card" key={x.slug}>
+                <div className="meta">{x.intent}</div>
+                <h3>{x.title}</h3>
+                <p>{x.description}</p>
+                <Link href={"/articles/"+x.slug+"/"}>Read guide <span aria-hidden="true">→</span></Link>
+              </article>)}
+            </div>
+          </section>
+        ))}
+
+        {!articles.length&&<div className="notice">This desk is in the editorial queue.</div>}
+      </div>
+    </section>
+  </>;
+}
