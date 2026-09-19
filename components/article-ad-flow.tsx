@@ -16,25 +16,18 @@ function insertionIndex(blocks:string[],target:number,start:number){
 
 export function ArticleAdFlow({html,slug,totalWords}:{html:string;slug:string;totalWords:number}){
  const blocks=html.split("\n").filter(Boolean);
- const plans:{index:number;kind:"rect"|"native";slot:string}[]=[];
+ const plans:{index:number;slot:string}[]=[];
  const used=new Set<number>();
- const addPlan=(target:number,kind:"rect"|"native",slot:string)=>{
+ const addPlan=(target:number,slot:string)=>{
   const index=insertionIndex(blocks,target,Math.max(0,(plans.at(-1)?.index??-1)+1));
-  if(index>=0&&!used.has(index)){plans.push({index,kind,slot});used.add(index);}
+  if(index>=0&&!used.has(index)){plans.push({index,slot});used.add(index);}
  };
- if(totalWords>=700)addPlan(Math.round(totalWords*.30),"rect",slug+"-inline-rect-1");
- if(totalWords>=1400)addPlan(Math.round(totalWords*.58),"native",slug+"-inline-native");
- if(totalWords>=2200)addPlan(Math.round(totalWords*.80),"rect",slug+"-inline-rect-2");
-
+ if(totalWords>=700)addPlan(Math.round(totalWords*.30),slug+"-inline-native-1");
  const byIndex=new Map(plans.map(plan=>[plan.index,plan]));
  return <div className="article-prose">
   {blocks.map((block,index)=><div className="article-block" key={index}>
    <div dangerouslySetInnerHTML={{__html:block}}/>
-   {byIndex.has(index)&&<div className="article-inline-ad">
-    {byIndex.get(index)?.kind==="native"
-      ? <NativeBanner slot={byIndex.get(index)!.slot} variant="horizontal"/>
-      : <AdsterraBanner size="300x250" slot={byIndex.get(index)!.slot}/>}
-   </div>}
+   {byIndex.has(index)&&<div className="article-inline-ad"><NativeBanner slot={byIndex.get(index)!.slot} variant="horizontal"/></div>}
   </div>)}
  </div>;
 }

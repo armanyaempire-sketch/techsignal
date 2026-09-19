@@ -81,13 +81,13 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
                   <p>{x.description}</p>
                 </article>)}
               </div>
-              {stageIndex===0&&stageArticles.length>0&&<div className="category-mid-ads"><NativeBanner slot={c.slug+"-native-transition"} variant="horizontal"/><AdsterraBanner size="300x250" slot={c.slug+"-300-transition"}/></div>}
+              {stageIndex===0&&stageArticles.length>0&&<div className="category-mid-ads"><NativeBanner slot={c.slug+"-native-transition"} variant="horizontal"/></div>}
             </section>
           ))}
 
           {!articles.length&&<div className="notice">This desk is in the editorial queue.</div>}
 
-          {articles.length>0&&<div className="category-end-ads"><AdsterraBanner size="300x250" slot={c.slug+"-300-end"}/><AdsterraBanner size="468x60" slot={c.slug+"-468-end"} visibility="desktop"/></div>}
+          {articles.length>0&&<div className="category-end-ads"><NativeBanner slot={c.slug+"-native-end"} variant="horizontal"/><AdsterraBanner size="468x60" slot={c.slug+"-468-end"} visibility="desktop"/></div>}
         </main>
 
         <aside className="category-hub-rail"><AdRail prefix={c.slug+"-rail"}/></aside>
