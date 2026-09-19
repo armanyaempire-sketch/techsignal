@@ -1,7 +1,6 @@
 import type {Metadata} from "next";
 import Link from "next/link";
 import {getAllArticles,getCategories} from "@/lib/articles";
-import {AdsterraBanner,NativeBanner,ResponsiveLeaderboard} from "@/components/adsterra";
 import {JsonLd} from "@/components/json-ld";
 
 export const metadata:Metadata={
