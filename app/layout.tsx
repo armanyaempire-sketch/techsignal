@@ -41,5 +41,5 @@ const website={
 };
 
 export default function RootLayout({children}:{children:React.ReactNode}){
- return <html lang="en"><head><meta name="google-adsense-account" content="ca-pub-4245594685213859" /></head><body><Header/><main>{children}</main><Footer/><ConsentProvider/><Analytics/><JsonLd data={[organization,website]}/></body></html>;
+ return <html lang="en"><head><meta name="google-adsense-account" content="ca-pub-4245594685213859" /><link rel="alternate" type="application/rss+xml" title="GuideSignal RSS" href={SITE_URL+"/feed.xml"} /></head><body><Header/><main>{children}</main><Footer/><ConsentProvider/><Analytics/><JsonLd data={[organization,website]}/></body></html>;
 }
