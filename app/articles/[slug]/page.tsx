@@ -19,6 +19,7 @@ export default async function ArticlePage({params}:{params:Promise<{slug:string}
     <div className="article-meta"><span>By {a.author}</span><span>•</span><span>Updated {a.updated}</span><span>•</span><span>{a.stage}</span></div>
     <div className="disclosure-note">Some links may be affiliate links. See our <Link href="/disclosure/">affiliate disclosure</Link>.</div>
     <AdStack position="article"/>
+    {a.offerKey&&<AffiliateCTA articleSlug={a.slug} position="article-top" offerKey={a.offerKey}/>}
     <div dangerouslySetInnerHTML={{__html:markdownToHtml(a.body)}}/>
     {a.offerKey&&<AffiliateCTA articleSlug={a.slug} position="article-bottom" offerKey={a.offerKey}/>}
     {a.sources.length>0&&<section><h2>Sources & further reading</h2><ul>{a.sources.map(s=><li key={s}><a href={s} target="_blank" rel="noopener noreferrer">{s}</a></li>)}</ul></section>}
