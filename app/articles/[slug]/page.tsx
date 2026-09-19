@@ -8,7 +8,7 @@ import {AdSlot} from "@/components/ad-slot";
 import {JsonLd} from "@/components/json-ld";
 import {ReadingProgress} from "@/components/reading-progress";
 import {FunnelBridge} from "@/components/funnel-bridge";
-import {ArticleVisual} from "@/components/article-visual";
+import {ArticleVisual,getArticleVisualFile} from "@/components/article-visual";
 import {SITE_URL} from "@/lib/site";
 import {getEditorialDesk} from "@/lib/editorial";
 
@@ -22,7 +22,7 @@ export default async function ArticlePage({params}:{params:Promise<{slug:string}
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)notFound();
  const related=getRelatedArticles(a,4);const siteUrl=SITE_URL;const articleUrl=siteUrl+"/articles/"+a.slug+"/";const desk=getEditorialDesk(a.category);
  const totalWords=a.body.trim().split(/\s+/).filter(Boolean).length;
- const articleImage=siteUrl+"/article-visuals/"+(a.category==="e-business"?"e-business.svg":a.category==="health-fitness"?"health-fitness.svg":"womens-health-beauty.svg");
+ const articleImage=siteUrl+"/article-visuals/"+getArticleVisualFile(a.slug,a.category);
  const articleSchema={"@context":"https://schema.org","@type":"Article","headline":a.title,"description":a.description,"image":[articleImage],"datePublished":a.date,"dateModified":a.updated,"inLanguage":"en","wordCount":totalWords,"isAccessibleForFree":true,"mainEntityOfPage":{"@type":"WebPage","@id":articleUrl},"author":{"@type":"Organization","@id":siteUrl+"#"+desk.id,"name":desk.name,"url":siteUrl+"/author/guidesignal-editorial-team/"},"publisher":{"@type":"Organization","@id":siteUrl+"#organization","name":"GuideSignal","url":siteUrl},"articleSection":a.categoryName,"keywords":a.keywords};
  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":a.categoryName,"item":siteUrl+"/category/"+a.category+"/"},{"@type":"ListItem","position":3,"name":a.title,"item":articleUrl}]};
  const minutes=Math.max(1,Math.round(totalWords/220));
