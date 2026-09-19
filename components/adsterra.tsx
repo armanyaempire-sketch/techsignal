@@ -20,7 +20,7 @@ function useConsent(){const[active,setActive]=useState(false);useEffect(()=>setA
 function useDesktopVisibility(visibility:Visibility){
  const[visible,setVisible]=useState(false);
  useEffect(()=>{
-  if(visibility==="all"){setVisible(true);return;}
+  if(visibility==="all"){setVisible(true);return}
   const mq=window.matchMedia("(min-width:1001px)");const sync=()=>setVisible(mq.matches);
   sync();mq.addEventListener?.("change",sync);return()=>mq.removeEventListener?.("change",sync);
  },[visibility]);
@@ -55,7 +55,7 @@ type LeaderboardTier="mobile"|"tablet"|"desktop";
 export function ResponsiveLeaderboard({slot}:{slot:string}){
  const active=useConsent();const[tier,setTier]=useState<LeaderboardTier|null>(null);
  useEffect(()=>{
-  if(!enabled)return;
+  if(!active)return;
   const mobile=window.matchMedia("(max-width:700px)");
   const tablet=window.matchMedia("(min-width:701px) and (max-width:1199px)");
   const sync=()=>setTier(mobile.matches?"mobile":tablet.matches?"tablet":"desktop");
@@ -67,7 +67,7 @@ export function ResponsiveLeaderboard({slot}:{slot:string}){
  return <AdsterraBanner key={size} size={size} slot={slot}/>;
 }
 
-export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: "horizontal"|"vertical"}){
+export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?:"horizontal"|"vertical"}){
  const active=useConsent();const wrap=useRef<HTMLDivElement>(null);
  useEffect(()=>{
   if(!active||!wrap.current)return;
@@ -91,18 +91,13 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: 
  return <div className={"ad-slot adsterra-slot adsterra-native adsterra-native-"+variant} data-ad-format={"native-"+variant} data-ad-slot={slot}><span className="ad-label">Advertisement</span><div ref={wrap} className="adsterra-native-mount"/></div>;
 }
 
+/*
+ * GuideSignal intentionally does not inject global popunders, social bars,
+ * forced redirects, or other site-wide ad behavior. Advertising must remain
+ * contextual, consent-gated, clearly labeled, and tied to explicit slots.
+ */
 export function AdsterraGlobalAds(){
- const active=useConsent();
  const pathname=usePathname();
- const enabled=active&&pathname!=="/";
- useEffect(()=>{
-  if(!enabled)return;
-  const add=(id:string,src:string,parent:HTMLElement)=>{
-   if(document.querySelector('script[data-guidesignal-ad="'+id+'"]'))return;
-   const script=document.createElement("script");script.src=src;script.async=true;script.dataset.guidesignalAd=id;parent.appendChild(script);
-  };
-  add("popunder","https://disregardpervertmural.com/d7/91/75/d79175dc149cc5eb147c18b4a115716d.js",document.head);
-  add("socialbar","https://disregardpervertmural.com/31/55/5f/31555f8da80d579a4c50e4ccf1cc5644.js",document.body);
- },[enabled]);
+ void pathname;
  return null;
 }
