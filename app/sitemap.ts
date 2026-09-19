@@ -16,6 +16,6 @@ export default function sitemap():MetadataRoute.Sitemap{
    return{url:SITE_URL+"/category/"+c.slug+"/",lastModified,changeFrequency:"weekly" as const,priority:.8};
   }),
   ...articles.map(a=>({url:SITE_URL+"/articles/"+a.slug+"/",lastModified:a.updated,changeFrequency:"monthly" as const,priority:.7})),
-  ...["about","editorial-policy","disclosure","privacy","terms","contact","author/guidesignal-editorial-team"].map(p=>({url:SITE_URL+"/"+p+"/",lastModified:latest,changeFrequency:"monthly" as const,priority:.3}))
+  ...["about","editorial-policy","disclosure","privacy","terms","contact","author/guidesignal-editorial-team"].map(p=>({url:SITE_URL+"/"+p+"/",changeFrequency:"yearly" as const,priority:.3}))
  ];
 }
