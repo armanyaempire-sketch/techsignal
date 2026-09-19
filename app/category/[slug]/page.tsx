@@ -1,0 +1,6 @@
+import Link from "next/link";
+import {notFound} from "next/navigation";
+import {getArticlesByCategory,getCategories,getCategoryBySlug} from "@/lib/articles";
+export function generateStaticParams(){return getCategories().map(c=>({slug:c.slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const c=getCategoryBySlug(slug);return{title:c?.name??"Category",description:c?.short??""};}
+export default async function CategoryPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const c=getCategoryBySlug(slug);if(!c)notFound();const a=getArticlesByCategory(slug);return <><div className="breadcrumbs"><Link href="/">Home</Link> / {c.name}</div><section className="section"><div className="container"><span className="eyebrow">Content desk</span><h1 style={{fontSize:"clamp(38px,6vw,58px)",marginBottom:14}}>{c.name}</h1><p className="muted" style={{maxWidth:760,fontSize:18}}>{c.short}</p><div className="grid-3">{a.map(x=><article className="card" key={x.slug}><div className="meta">{x.stage} · {x.intent}</div><h3>{x.title}</h3><p>{x.description}</p><Link href={"/articles/"+x.slug+"/"}>Read guide →</Link></article>)}</div>{!a.length&&<div className="notice">This desk is in the editorial queue.</div>}</div></section></>}

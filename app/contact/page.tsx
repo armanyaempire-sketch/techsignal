@@ -1,0 +1,2 @@
+export const metadata={title:"Contact TechSignal"};
+export default function Contact(){return <div className="container section"><div className="info-card" style={{maxWidth:820,margin:"auto"}}><span className="eyebrow">Contact</span><h1>Contact TechSignal</h1><p>The production contact address will be added before launch. The route is already part of the site architecture.</p><div className="notice">For now, editorial corrections can be handled through the project repository workflow.</div></div></div>}

@@ -1,0 +1,5 @@
+"use client";
+import {useEffect,useState} from "react";
+const KEY="ts-consent-v1";
+export function ConsentProvider(){const[show,setShow]=useState(false);useEffect(()=>setShow(window.localStorage.getItem(KEY)==null),[]);if(!show)return null;const save=(v:"all"|"necessary")=>{window.localStorage.setItem(KEY,v);setShow(false);window.location.reload()};return <div className="consent-banner"><div><strong>Privacy choices</strong><p>Optional analytics and advertising tools can be enabled after consent.</p></div><div className="consent-actions"><button className="button button-secondary" onClick={()=>save("necessary")}>Necessary only</button><button className="button" onClick={()=>save("all")}>Allow optional tools</button></div></div>}
+export function hasOptionalConsent(){return typeof window!=="undefined"&&window.localStorage.getItem(KEY)==="all"}

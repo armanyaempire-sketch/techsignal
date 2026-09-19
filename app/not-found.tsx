@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <div className="container section"><div className="info-card"><span className="eyebrow">404</span><h1>That page is not here.</h1><p className="muted">The link may be outdated or still in the editorial queue.</p><Link className="button" href="/">Back to TechSignal</Link></div></div>}

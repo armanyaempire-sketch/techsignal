@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function Header(){return <header className="site-header"><div className="container header-inner"><Link href="/" className="brand"><span className="brand-mark">TS</span><span><strong>TechSignal</strong><small>Useful ideas. Smarter decisions.</small></span></Link><nav className="main-nav"><Link href="/category/e-business/">E-Business</Link><Link href="/category/health-fitness/">Health & Fitness</Link><Link href="/category/womens-health-beauty/">Women's Health</Link><Link href="/about/">About</Link></nav></div></header>;}
