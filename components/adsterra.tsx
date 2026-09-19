@@ -42,7 +42,7 @@ export function AdsterraBanner({size,slot,visibility="all"}:{size:BannerSize;slo
     script.async=true;script.onload=()=>resolve();script.onerror=()=>{el.dataset.loaded="failed";el.dataset.failed="true";el.closest<HTMLElement>(".adsterra-slot")?.setAttribute("data-ad-failed","true");reject(new Error("Adsterra banner failed"));};
     el.appendChild(script);
    });
-   if(el&&!cancelled)el.dataset.loaded="true";
+   if(el&&!cancelled){el.dataset.loaded="true";el.closest<HTMLElement>(".adsterra-slot")?.setAttribute("data-ad-ready","true");}
   });
   return()=>{cancelled=true};
  },[active,visible,cfg.key,cfg.height,cfg.width]);
