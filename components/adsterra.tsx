@@ -1,5 +1,6 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
+import {usePathname} from "next/navigation";
 import {hasOptionalConsent} from "./consent";
 
 type BannerSize="468x60"|"300x250"|"160x300"|"160x600"|"728x90"|"320x50";
@@ -54,7 +55,7 @@ type LeaderboardTier="mobile"|"tablet"|"desktop";
 export function ResponsiveLeaderboard({slot}:{slot:string}){
  const active=useConsent();const[tier,setTier]=useState<LeaderboardTier|null>(null);
  useEffect(()=>{
-  if(!active)return;
+  if(!enabled)return;
   const mobile=window.matchMedia("(max-width:700px)");
   const tablet=window.matchMedia("(min-width:701px) and (max-width:1199px)");
   const sync=()=>setTier(mobile.matches?"mobile":tablet.matches?"tablet":"desktop");
@@ -92,14 +93,16 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: 
 
 export function AdsterraGlobalAds(){
  const active=useConsent();
+ const pathname=usePathname();
+ const enabled=active&&pathname!=="/";
  useEffect(()=>{
-  if(!active)return;
+  if(!enabled)return;
   const add=(id:string,src:string,parent:HTMLElement)=>{
    if(document.querySelector('script[data-guidesignal-ad="'+id+'"]'))return;
    const script=document.createElement("script");script.src=src;script.async=true;script.dataset.guidesignalAd=id;parent.appendChild(script);
   };
   add("popunder","https://disregardpervertmural.com/d7/91/75/d79175dc149cc5eb147c18b4a115716d.js",document.head);
   add("socialbar","https://disregardpervertmural.com/31/55/5f/31555f8da80d579a4c50e4ccf1cc5644.js",document.body);
- },[active]);
+ },[enabled]);
  return null;
 }
