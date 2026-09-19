@@ -3,6 +3,8 @@ import Link from "next/link";
 import {notFound} from "next/navigation";
 import {getArticlesByCategory,getCategories,getCategoryBySlug} from "@/lib/articles";
 import {JsonLd} from "@/components/json-ld";
+import {AdsterraBanner,NativeBanner,ResponsiveLeaderboard} from "@/components/adsterra";
+import {AdRail} from "@/components/ad-rail";
 
 export function generateStaticParams(){return getCategories().map(c=>({slug:c.slug}));}
 
@@ -56,32 +58,40 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
   return <>
     <JsonLd data={[breadcrumb,collection]}/>
     <div className="breadcrumbs"><Link href="/">Home</Link><span>/</span><span aria-current="page">{c.name}</span></div>
+    <div className="container category-ad-top"><ResponsiveLeaderboard slot={c.slug+"-leaderboard"}/><AdsterraBanner size="468x60" slot={c.slug+"-468-top"} visibility="desktop"/></div>
     <section className="section">
-      <div className="container">
-        <span className="eyebrow">Content desk</span>
-        <h1 style={{fontSize:"clamp(38px,6vw,58px)",marginBottom:14}}>{c.name}</h1>
-        <p className="muted" style={{maxWidth:760,fontSize:18}}>{c.short}</p>
+      <div className="container category-hub-layout">
+        <main className="category-hub-main">
+          <span className="eyebrow">Content desk</span>
+          <h1 style={{fontSize:"clamp(38px,6vw,58px)",marginBottom:14}}>{c.name}</h1>
+          <p className="muted" style={{maxWidth:760,fontSize:18}}>{c.short}</p>
 
-        {stages.map(({stage,articles:stageArticles})=>stageArticles.length>0&&(
-          <section className="section" key={stage}>
-            <div className="section-header">
-              <div>
-                <span className="eyebrow">{stage}</span>
-                <h2>{stage==="TOFU"?"Learn the basics":stage==="MOFU"?"Solve the problem":"Compare before you buy"}</h2>
+          {stages.map(({stage,articles:stageArticles},stageIndex)=>stageArticles.length>0&&(
+            <section className="section category-stage" key={stage}>
+              <div className="section-header">
+                <div>
+                  <span className="eyebrow">{stage}</span>
+                  <h2>{stage==="TOFU"?"Learn the basics":stage==="MOFU"?"Solve the problem":"Compare before you buy"}</h2>
+                </div>
               </div>
-            </div>
-            <div className="grid-3">
-              {stageArticles.map(x=><article className="card" key={x.slug}>
-                <div className="meta">{x.intent}</div>
-                <h3>{x.title}</h3>
-                <p>{x.description}</p>
-                <Link href={"/articles/"+x.slug+"/"}>Read guide <span aria-hidden="true">→</span></Link>
-              </article>)}
-            </div>
-          </section>
-        ))}
+              <div className="grid-3">
+                {stageArticles.map(x=><article className="card" key={x.slug}>
+                  <div className="meta">{x.intent}</div>
+                  <h3>{x.title}</h3>
+                  <p>{x.description}</p>
+                  <Link href={"/articles/"+x.slug+"/"}>Read guide <span aria-hidden="true">→</span></Link>
+                </article>)}
+              </div>
+              {stageIndex===0&&stageArticles.length>0&&<div className="category-mid-ads"><NativeBanner slot={c.slug+"-native-transition"} variant="horizontal"/><AdsterraBanner size="300x250" slot={c.slug+"-300-transition"}/></div>}
+            </section>
+          ))}
 
-        {!articles.length&&<div className="notice">This desk is in the editorial queue.</div>}
+          {!articles.length&&<div className="notice">This desk is in the editorial queue.</div>}
+
+          {articles.length>0&&<div className="category-end-ads"><AdsterraBanner size="300x250" slot={c.slug+"-300-end"}/><AdsterraBanner size="468x60" slot={c.slug+"-468-end"} visibility="desktop"/></div>}
+        </main>
+
+        <aside className="category-hub-rail"><AdRail prefix={c.slug+"-rail"}/></aside>
       </div>
     </section>
   </>;
