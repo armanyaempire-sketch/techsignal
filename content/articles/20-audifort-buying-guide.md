@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: Audifort, hearing support, hearing supplement, Audifort review, hearing health buying guide
 offerKey: audifort
-sources: https://www.nidcd.nih.gov/health/hearing-health|https://www.nidcd.nih.gov/health/sudden-deafness
+sources: https://www.nidcd.nih.gov/health/hearing-health|https://www.nidcd.nih.gov/health/sudden-deafness|https://www.nidcd.nih.gov/health/adult-hearing-health-care
 ---
 
 Online hearing-support products often use broad promises. A better buying process starts with the actual product details, the current label and a clear understanding of what an online offer can and cannot establish.
@@ -114,6 +114,22 @@ The purpose of this page is to help a buyer distinguish product information from
 ## Continue your research
 
 For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/).
+
+## A side-by-side research worksheet
+
+When comparing Audifort with another hearing-support product, record the same facts for both.
+
+| Factor | Product A | Product B |
+|---|---|---|
+| Product type | Supplement, device or other | Confirm category |
+| Intended use | What problem is addressed? | What problem is addressed? |
+| Evidence | Product-specific evidence | Product-specific evidence |
+| Usability | Setup and routine | Setup and routine |
+| Full cost | Include recurring charges | Include recurring charges |
+| Seller support | Current contact details | Current contact details |
+| Refund/warranty | Current policy | Current policy |
+
+NIDCD consumer guidance distinguishes hearing-care needs from product shopping. For ongoing hearing difficulty, hearing-care professionals can help identify the cause and appropriate options; a product page should not be used as a substitute for that assessment.
 
 ## Bottom line
 
