@@ -57,7 +57,7 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
 
   return <>
     <JsonLd data={[breadcrumb,collection]}/>
-    <div className="breadcrumbs"><Link href="/">Home</Link><span>/</span><span aria-current="page">{c.name}</span></div>
+    <div className="breadcrumbs"><Link prefetch={false} href="/">Home</Link><span>/</span><span aria-current="page">{c.name}</span></div>
     <div className="container category-ad-top"><ResponsiveLeaderboard slot={c.slug+"-leaderboard"}/><AdsterraBanner size="468x60" slot={c.slug+"-468-top"} visibility="desktop"/></div>
     <section className="section">
       <div className="container category-hub-layout">
@@ -79,7 +79,7 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
                   <div className="meta">{x.intent}</div>
                   <h3>{x.title}</h3>
                   <p>{x.description}</p>
-                  <Link href={"/articles/"+x.slug+"/"} prefetch={false}>Read guide <span aria-hidden="true">→</span></Link>
+                  <Link prefetch={false} href={"/articles/"+x.slug+"/"} prefetch={false}>Read guide <span aria-hidden="true">→</span></Link>
                 </article>)}
               </div>
               {stageIndex===0&&stageArticles.length>0&&<div className="category-mid-ads"><NativeBanner slot={c.slug+"-native-transition"} variant="horizontal"/><AdsterraBanner size="300x250" slot={c.slug+"-300-transition"}/></div>}
