@@ -4,7 +4,6 @@ import {clickBankOffers,type ClickBankOfferKey} from "@/lib/clickbank";
 const envMap:Record<ClickBankOfferKey,string|undefined>={
   prodentim:process.env.NEXT_PUBLIC_CLICKBANK_PRODENTIM_HOPLINK,
   brainsongx:process.env.NEXT_PUBLIC_CLICKBANK_BRAINSONGX_HOPLINK,
-  enrev:process.env.NEXT_PUBLIC_CLICKBANK_ENREV_HOPLINK,
   prostavive:process.env.NEXT_PUBLIC_CLICKBANK_PROSTAVIVE_HOPLINK,
   audifort:process.env.NEXT_PUBLIC_CLICKBANK_AUDIFORT_HOPLINK
 };
