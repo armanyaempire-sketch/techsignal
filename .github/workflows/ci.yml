@@ -23,5 +23,8 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: SEO content audit
+        run: npm run seo-audit
+
       - name: Production build
         run: npm run build
