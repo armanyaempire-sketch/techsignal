@@ -23,5 +23,5 @@ export const metadata:Metadata={
 export default function RootLayout({children}:{children:React.ReactNode}){
  const website={"@context":"https://schema.org","@type":"WebSite","name":"GuideSignal","url":siteUrl,"description":"Practical guides on AI, online business, health, fitness and women's wellness."};
  const org={"@context":"https://schema.org","@type":"Organization","name":"GuideSignal","url":siteUrl};
- return <html lang="en"><head><script src="https://quge5.com/88/tag.min.js" data-zone="283294" async data-cfasync="false"></script><script>(function(s){s.dataset.zone='11841504',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script><meta name="google-adsense-account" content="ca-pub-4245594685213859" /></head><body><JsonLd data={[website,org]}/><Header/><main>{children}</main><Footer/><ConsentProvider/><Analytics/><AdsterraGlobalAds/></body></html>;
+ return <html lang="en"><head><meta name="google-adsense-account" content="ca-pub-4245594685213859" /></head><body><JsonLd data={[website,org]}/><Header/><main>{children}</main><Footer/><ConsentProvider/><Analytics/><AdsterraGlobalAds/></body></html>;
 }
