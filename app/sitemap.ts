@@ -16,6 +16,6 @@ export default function sitemap():MetadataRoute.Sitemap{
       return{url:base+"/category/"+c.slug+"/",lastModified};
     }),
     ...articles.map(a=>({url:base+"/articles/"+a.slug+"/",lastModified:a.updated})),
-    ...["about","editorial-policy","disclosure","privacy","terms","contact","author/guidesignal-editorial-team"].map(p=>({url:base+"/"+p+"/",lastModified:latest}))
+    ...["about","editorial-policy","disclosure","privacy","terms","contact","author/guidesignal-editorial-team"].map(p=>({url:base+"/"+p+"/"}))
   ];
 }
