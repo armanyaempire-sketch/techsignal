@@ -99,6 +99,9 @@ if(!sitemap.includes("lastModified"))errors.push("sitemap.ts has no lastModified
 if(sitemap.includes("changeFrequency")||sitemap.includes("priority"))errors.push("sitemap.ts still contains ignored changeFrequency/priority fields.");
 const layout=fs.readFileSync(path.join(root,"app/layout.tsx"),"utf8");
 if(!layout.includes('application/rss+xml'))errors.push("layout.tsx does not advertise the RSS feed.");
+if(!layout.includes('verification:{google:verification}'))errors.push("layout.tsx is missing Google Search Console meta verification.");
+if(!/const verification="[^"]+"/.test(layout))errors.push("layout.tsx has no Google verification token.");
+if(!fs.existsSync(path.join(root,"public","googleb5dd74162d2e16fb.html")))errors.push("Google HTML verification file is missing.");
 if(!fs.existsSync(path.join(root,"app/feed.xml/route.ts")))errors.push("RSS route is missing.");
 if(!layout.includes('metadataBase:new URL(SITE_URL)'))errors.push("metadataBase is not tied to SITE_URL.");
 
