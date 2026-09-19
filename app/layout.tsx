@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
 
 const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
-const verification=process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+const verification="TZ4UN7hYX8Xkb5NNifdkAeixecairRR0RqvKF3AeBKw";
 
 export const metadata:Metadata={
   metadataBase:new URL(siteUrl),
