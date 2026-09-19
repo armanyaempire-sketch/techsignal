@@ -17,7 +17,7 @@ let queue:Promise<void>=Promise.resolve();
 function enqueue(task:()=>Promise<void>){const next=queue.then(task);queue=next.catch(()=>{});return next;}
 function useConsent(){const[active,setActive]=useState(false);useEffect(()=>setActive(hasOptionalConsent()),[]);return active;}
 function useDesktopVisibility(visibility:Visibility){
- const[visible,setVisible]=useState(visibility==="all");
+ const[visible,setVisible]=useState(false);
  useEffect(()=>{
   if(visibility==="all"){setVisible(true);return;}
   const mq=window.matchMedia("(min-width:1001px)");const sync=()=>setVisible(mq.matches);
@@ -52,7 +52,7 @@ export function AdsterraBanner({size,slot,visibility="all"}:{size:BannerSize;slo
 
 type LeaderboardTier="mobile"|"tablet"|"desktop";
 export function ResponsiveLeaderboard({slot}:{slot:string}){
- const active=useConsent();const[tier,setTier]=useState<LeaderboardTier>("mobile");
+ const active=useConsent();const[tier,setTier]=useState<LeaderboardTier|null>(null);
  useEffect(()=>{
   if(!active)return;
   const mobile=window.matchMedia("(max-width:700px)");
@@ -61,9 +61,9 @@ export function ResponsiveLeaderboard({slot}:{slot:string}){
   sync();mobile.addEventListener?.("change",sync);tablet.addEventListener?.("change",sync);
   return()=>{mobile.removeEventListener?.("change",sync);tablet.removeEventListener?.("change",sync)};
  },[active]);
- if(!active)return null;
+ if(!active||!tier)return null;
  const size=tier==="mobile"?"320x50":tier==="tablet"?"468x60":"728x90";
- return <AdsterraBanner size={size} slot={slot}/>;
+ return <AdsterraBanner key={size} size={size} slot={slot}/>;
 }
 
 export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: "horizontal"|"vertical"}){

@@ -27,3 +27,5 @@
  .adsterra-slot[data-ad-format="728x90"],.adsterra-slot[data-ad-format="468x60"]{max-width:100%;overflow:hidden}
  .adsterra-slot[data-ad-format="300x250"]{min-width:0}
 }
+
+.article-block>div{display:contents}
