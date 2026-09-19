@@ -20,7 +20,9 @@ export function AdsterraBanner({size,slot}:{size:BannerSize;slot:string}){
  const active=useConsent();const mount=useRef<HTMLDivElement>(null);const cfg=bannerConfig[size];
  useEffect(()=>{
   if(!active||!mount.current)return;
-  return enqueue(async()=>{
+  let cancelled=false;
+  void enqueue(async()=>{
+   if(cancelled)return;
    const el=mount.current;if(!el||el.dataset.loaded==="true"||el.dataset.loaded==="loading")return;
    el.dataset.loaded="loading";
    await new Promise<void>((resolve,reject)=>{
@@ -30,8 +32,9 @@ export function AdsterraBanner({size,slot}:{size:BannerSize;slot:string}){
     script.async=true;script.onload=()=>resolve();script.onerror=()=>{el.dataset.failed="true";reject(new Error("Adsterra banner failed"));};
     el.appendChild(script);
    });
-   if(el)el.dataset.loaded="true";
+   if(el&&!cancelled)el.dataset.loaded="true";
   });
+  return()=>{cancelled=true};
  },[active,cfg.key,cfg.height,cfg.width]);
  if(!active)return null;
  return <div className={"ad-slot adsterra-slot adsterra-"+size} data-ad-format={size} data-ad-slot={slot}><span className="ad-label">Advertisement</span><div ref={mount} className="adsterra-mount"/></div>;
@@ -52,7 +55,9 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: 
  const active=useConsent();const wrap=useRef<HTMLDivElement>(null);
  useEffect(()=>{
   if(!active||!wrap.current)return;
-  return enqueue(async()=>{
+  let cancelled=false;
+  void enqueue(async()=>{
+   if(cancelled)return;
    const el=wrap.current;if(!el||el.dataset.loaded==="true"||el.dataset.loaded==="loading")return;
    el.dataset.loaded="loading";
    const container=document.createElement("div");container.id="container-c4d6c7521da8806f322e86f7b566a2e0";el.appendChild(container);
@@ -62,8 +67,9 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: 
     script.onload=()=>resolve();script.onerror=()=>{el.dataset.failed="true";reject(new Error("Adsterra native failed"));};
     el.appendChild(script);
    });
-   if(el)el.dataset.loaded="true";
+   if(el&&!cancelled)el.dataset.loaded="true";
   });
+  return()=>{cancelled=true};
  },[active]);
  if(!active)return null;
  return <div className={"ad-slot adsterra-slot adsterra-native adsterra-native-"+variant} data-ad-format={"native-"+variant} data-ad-slot={slot}><span className="ad-label">Advertisement</span><div ref={wrap} className="adsterra-native-mount"/></div>;
