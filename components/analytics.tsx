@@ -24,7 +24,21 @@ export function Analytics(){
       "gtag('config',"+JSON.stringify(id)+",{anonymize_ip:true});";
     document.head.appendChild(config);
 
+    const onOutboundClick=(event:MouseEvent)=>{
+      const target=(event.target as HTMLElement).closest<HTMLAnchorElement>("a[href]");
+      if(!target||target.hasAttribute("data-affiliate"))return;
+      const href=target.href;
+      if(!href||href.startsWith(window.location.origin))return;
+      const g=(window as Window&{gtag?:Function}).gtag;
+      g?.("event","outbound_click",{
+        link_url:href,
+        link_text:(target.textContent||"").trim().slice(0,100)
+      });
+    };
+    document.addEventListener("click",onOutboundClick);
+
     return()=>{
+      document.removeEventListener("click",onOutboundClick);
       script.remove();
       config.remove();
     };
