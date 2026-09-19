@@ -3,6 +3,7 @@ import {useEffect,useRef,useState} from "react";
 import {hasOptionalConsent} from "./consent";
 
 type BannerSize="468x60"|"300x250"|"160x300"|"160x600"|"728x90"|"320x50";
+type Visibility="all"|"desktop";
 const bannerConfig:Record<BannerSize,{key:string;width:number;height:number}>={
  "468x60":{key:"c5ddf1ec28d162c14fb4535f4e1ffdbb",width:468,height:60},
  "300x250":{key:"037d26ce79ace1819e9433122a0b6cf6",width:300,height:250},
@@ -15,11 +16,20 @@ const bannerConfig:Record<BannerSize,{key:string;width:number;height:number}>={
 let queue:Promise<void>=Promise.resolve();
 function enqueue(task:()=>Promise<void>){const next=queue.then(task);queue=next.catch(()=>{});return next;}
 function useConsent(){const[active,setActive]=useState(false);useEffect(()=>setActive(hasOptionalConsent()),[]);return active;}
-
-export function AdsterraBanner({size,slot}:{size:BannerSize;slot:string}){
- const active=useConsent();const mount=useRef<HTMLDivElement>(null);const cfg=bannerConfig[size];
+function useDesktopVisibility(visibility:Visibility){
+ const[visible,setVisible]=useState(visibility==="all");
  useEffect(()=>{
-  if(!active||!mount.current)return;
+  if(visibility==="all"){setVisible(true);return;}
+  const mq=window.matchMedia("(min-width:1001px)");const sync=()=>setVisible(mq.matches);
+  sync();mq.addEventListener?.("change",sync);return()=>mq.removeEventListener?.("change",sync);
+ },[visibility]);
+ return visible;
+}
+
+export function AdsterraBanner({size,slot,visibility="all"}:{size:BannerSize;slot:string;visibility?:Visibility}){
+ const active=useConsent();const visible=useDesktopVisibility(visibility);const mount=useRef<HTMLDivElement>(null);const cfg=bannerConfig[size];
+ useEffect(()=>{
+  if(!active||!visible||!mount.current)return;
   let cancelled=false;
   void enqueue(async()=>{
    if(cancelled)return;
@@ -29,26 +39,31 @@ export function AdsterraBanner({size,slot}:{size:BannerSize;slot:string}){
     (window as Window&{atOptions?:Record<string,unknown>}).atOptions={key:cfg.key,format:"iframe",height:cfg.height,width:cfg.width,params:{}};
     const script=document.createElement("script");
     script.src="https://disregardpervertmural.com/"+cfg.key+"/invoke.js";
-    script.async=true;script.onload=()=>resolve();script.onerror=()=>{el.dataset.failed="true";reject(new Error("Adsterra banner failed"));};
+    script.async=true;script.onload=()=>resolve();script.onerror=()=>{el.dataset.loaded="failed";el.dataset.failed="true";el.closest<HTMLElement>(".adsterra-slot")?.setAttribute("data-ad-failed","true");reject(new Error("Adsterra banner failed"));};
     el.appendChild(script);
    });
    if(el&&!cancelled)el.dataset.loaded="true";
   });
   return()=>{cancelled=true};
- },[active,cfg.key,cfg.height,cfg.width]);
- if(!active)return null;
+ },[active,visible,cfg.key,cfg.height,cfg.width]);
+ if(!active||!visible)return null;
  return <div className={"ad-slot adsterra-slot adsterra-"+size} data-ad-format={size} data-ad-slot={slot}><span className="ad-label">Advertisement</span><div ref={mount} className="adsterra-mount"/></div>;
 }
 
+type LeaderboardTier="mobile"|"tablet"|"desktop";
 export function ResponsiveLeaderboard({slot}:{slot:string}){
- const active=useConsent();const[mobile,setMobile]=useState(false);
+ const active=useConsent();const[tier,setTier]=useState<LeaderboardTier>("mobile");
  useEffect(()=>{
   if(!active)return;
-  const mq=window.matchMedia("(max-width:700px)");const sync=()=>setMobile(mq.matches);
-  sync();mq.addEventListener?.("change",sync);return()=>mq.removeEventListener?.("change",sync);
+  const mobile=window.matchMedia("(max-width:700px)");
+  const tablet=window.matchMedia("(min-width:701px) and (max-width:1199px)");
+  const sync=()=>setTier(mobile.matches?"mobile":tablet.matches?"tablet":"desktop");
+  sync();mobile.addEventListener?.("change",sync);tablet.addEventListener?.("change",sync);
+  return()=>{mobile.removeEventListener?.("change",sync);tablet.removeEventListener?.("change",sync)};
  },[active]);
  if(!active)return null;
- return <AdsterraBanner size={mobile?"320x50":"728x90"} slot={slot}/>;
+ const size=tier==="mobile"?"320x50":tier==="tablet"?"468x60":"728x90";
+ return <AdsterraBanner size={size} slot={slot}/>;
 }
 
 export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: "horizontal"|"vertical"}){
@@ -64,7 +79,7 @@ export function NativeBanner({slot,variant="horizontal"}:{slot:string;variant?: 
    await new Promise<void>((resolve,reject)=>{
     const script=document.createElement("script");script.async=true;script.setAttribute("data-cfasync","false");
     script.src="https://disregardpervertmural.com/c4d6c7521da8806f322e86f7b566a2e0/invoke.js";
-    script.onload=()=>resolve();script.onerror=()=>{el.dataset.failed="true";reject(new Error("Adsterra native failed"));};
+    script.onload=()=>resolve();script.onerror=()=>{el.dataset.loaded="failed";el.dataset.failed="true";el.closest<HTMLElement>(".adsterra-slot")?.setAttribute("data-ad-failed","true");reject(new Error("Adsterra native failed"));};
     el.appendChild(script);
    });
    if(el&&!cancelled)el.dataset.loaded="true";
