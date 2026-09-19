@@ -29,3 +29,9 @@
 }
 
 .article-block>div{display:contents}
+
+/* GuideSignal article-card color treatment */
+.home-latest-main .card:nth-child(3n+1){background:#eef5ff;border-color:#d7e5fb}
+.home-latest-main .card:nth-child(3n+2){background:#eefaf5;border-color:#d7eee2}
+.home-latest-main .card:nth-child(3n){background:#fff6ec;border-color:#f0dfc8}
+.home-latest-main .card:hover{filter:saturate(1.02)}
