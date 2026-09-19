@@ -12,6 +12,7 @@ import {ArticleAdFlow} from "@/components/article-ad-flow";
 import {Smartlink} from "@/components/smartlink";
 import {JsonLd} from "@/components/json-ld";
 import {ReadingProgress} from "@/components/reading-progress";
+import {FunnelBridge} from "@/components/funnel-bridge";
 
 export function generateStaticParams(){return getAllArticles().map(a=>({slug:a.slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
@@ -31,6 +32,7 @@ export default async function ArticlePage({params}:{params:Promise<{slug:string}
  <div className="container article-layout"><article className="article-shell article-reading"><header className="article-header"><span className="eyebrow">{a.categoryName}</span><h1>{a.title}</h1><div className="article-meta"><span>By <Link href="/author/guidesignal-editorial-team/">GuideSignal Editorial Team</Link></span><span>•</span><span>Updated {a.updated}</span><span>•</span><span>{minutes} min read</span><span>•</span><span>{a.stage}</span></div><div className="disclosure-note">Some links may be affiliate links. See our <Link href="/disclosure/">affiliate disclosure</Link>.</div></header>
  <AdStack position="article"/>{a.offerKey&&<AffiliateCTA articleSlug={a.slug} position="article-top" offerKey={a.offerKey}/>}<ArticleAdFlow html={articleHtml} slug={a.slug} totalWords={totalWords}/>
  {a.offerKey&&<AffiliateCTA articleSlug={a.slug} position="article-bottom" offerKey={a.offerKey}/>}
+ <FunnelBridge current={a} related={related}/>
  {a.sources.length>0&&<section className="sources-section"><h2>Sources & further reading</h2><ul>{a.sources.map(s=><li key={s}><a href={s} target="_blank" rel="noopener noreferrer">{s}</a></li>)}</ul></section>}
  {related.length>0&&<section className="related-section"><div className="section-header"><div><span className="eyebrow">Keep reading</span><h2>Related guides</h2></div></div><div className="related-grid">{related.map(x=><Link className="related-card" key={x.slug} href={"/articles/"+x.slug+"/"}><span className="meta">{x.categoryName} · {x.stage}</span><h3>{x.title}</h3><p>{x.description}</p><span className="related-link">Read guide →</span></Link>)}</div></section>}
  <Smartlink articleSlug={a.slug}/><div className="article-end-ads"><AdsterraBanner size="300x250" slot={a.slug+"-300-bottom"}/><AdsterraBanner size="468x60" slot={a.slug+"-468-bottom"} visibility="desktop"/></div><AdSlot slot="bottom" scriptUrl={process.env.NEXT_PUBLIC_AD_BOTTOM_SCRIPT_URL} zone={process.env.NEXT_PUBLIC_AD_BOTTOM_ZONE}/></article>
