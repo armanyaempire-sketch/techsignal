@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: ProDentim, oral care supplement, dental supplement, ProDentim review, oral health buying guide
 offerKey: prodentim
-sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/food/information-consumers-using-dietary-supplements/questions-and-answers-dietary-supplements
+sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/food/information-consumers-using-dietary-supplements/questions-and-answers-dietary-supplements|https://www.nccih.nih.gov/health/dietary-and-herbal-supplements
 ---
 
 When an online product is marketed for oral health, the useful question is not simply whether the sales page sounds convincing. A better approach is to research what the product is, what the seller says, what the current purchase terms are and what the product cannot establish.
@@ -99,6 +99,26 @@ The goal is to help a buyer ask better questions before ordering.
 ## Continue your research
 
 For a related topic, see our [beginner skincare routine](/articles/14-simple-skincare-routine/).
+
+## A better comparison matrix
+
+When comparing ProDentim with another oral-care supplement, record the same fields for both products rather than relying on one sales page.
+
+| Factor | Product A | Product B |
+|---|---|---|
+| Serving size | Check current label | Check current label |
+| Listed ingredients | Record amounts where disclosed | Record amounts where disclosed |
+| Exact health claims | Quote the current claim | Quote the current claim |
+| Product-specific evidence | What supports the claim? | What supports the claim? |
+| Full purchase cost | Include shipping and renewal | Include shipping and renewal |
+| Refund/cancellation | Current seller policy | Current seller policy |
+| Seller identity | Verify company/contact details | Verify company/contact details |
+
+The table is intentionally a research worksheet. It avoids pretending that a price or formulation is permanent when the merchant can change it.
+
+## Questions to ask before checkout
+
+A useful final check is: What exactly arrives, what does the current label say, what evidence supports the important claims, what will the complete purchase cost be, and what happens if you want to cancel or request a refund?
 
 ## Bottom line
 
