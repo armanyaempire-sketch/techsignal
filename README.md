@@ -7,15 +7,24 @@ Performance-first editorial site for practical guides across AI and online busin
 - Static export to minimize runtime/serverless usage
 - GitHub as source of truth
 - Provider-neutral advertising integration points
-- ClickBank affiliate CTA tracking
+- Explicit, disclosed ClickBank affiliate CTA support
 - Google Analytics and Search Console hooks
 - Markdown content under content/articles
 - Programmatic sitemap and robots.txt
 
 ## Deployment discipline
-Batch validated code and content changes into one commit and deploy once. Avoid API routes and request-time functions unless a clear business need exists.
+Batch validated code and content changes and deploy once. Avoid API routes and request-time functions unless a clear business need exists.
 
-## Before production
-Set the real site URL, add the verified ClickBank hoplink, configure the exact ad-network snippets/IDs, configure analytics and consent appropriately, replace the contact placeholder, and run npm run typecheck plus npm run build.
+## Current production safeguards
+- Homepage and category hubs are editorial-first and ad-free.
+- No popunder, forced redirect, opaque smartlink, or retired third-party ad-network code is shipped.
+- Article pages render their full Markdown body before any optional contextual advertisement.
+- At most one contextual advertisement slot is available per article.
+- Affiliate offers are disclosed and removed when an article does not provide substantive decision support.
+- Health and wellness pages use transparent research-desk authorship and avoid invented clinical credentials or personal-testing claims.
+- Contact includes a public correction workflow.
 
-The initial release contains 15 seed articles. The 90-article roadmap is documented in docs/90-article-plan.md.
+## Before enabling a new monetization provider
+Set the real site URL for the production environment, configure the approved provider only after its exact snippets/IDs and privacy requirements are reviewed, verify analytics and consent behavior, and run npm run typecheck plus npm run build in a trusted environment.
+
+The current repository contains 31 seed articles. The longer-term 90-article roadmap is documented in docs/90-article-plan.md.
