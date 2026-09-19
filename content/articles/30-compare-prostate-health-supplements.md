@@ -9,7 +9,7 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: prostate health supplement, men's health supplement, supplement comparison, prostate supplement buying guide
-sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/drugs/resources-drugs/drug-interactions-what-you-should-know
+sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/drugs/resources-drugs/drug-interactions-what-you-should-know|https://www.nccih.nih.gov/health/mens-health
 ---
 
 Prostate-health supplements can be difficult to compare because products may use similar ingredient names while making very different claims.
@@ -126,6 +126,20 @@ Record:
 **Questions for a clinician**
 
 This creates an objective checklist before purchase.
+
+## Side-by-side worksheet
+
+| Factor | Product A | Product B |
+|---|---|---|
+| Serving size | Record current label | Record current label |
+| Ingredients | Amounts and form | Amounts and form |
+| Exact claims | Quote current claim | Quote current claim |
+| Supporting evidence | Product-specific if available | Product-specific if available |
+| Price per serving | Calculate current cost | Calculate current cost |
+| Billing | One-time / recurring | One-time / recurring |
+| Refund | Current policy | Current policy |
+
+A useful comparison is evidence-led rather than ingredient-led. NCCIH notes that many supplements marketed for men's health have not been shown to be safe or effective, so an ingredient list should not be treated as proof of a promised outcome.
 
 ## Bottom line
 
