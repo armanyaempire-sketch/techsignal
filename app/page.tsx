@@ -3,7 +3,6 @@ import type {Article} from "@/lib/articles";
 import Link from "next/link";
 import {getAllArticles,getArticlesByCategory,getCategories} from "@/lib/articles";
 import {JsonLd} from "@/components/json-ld";
-import {ResponsiveLeaderboard} from "@/components/adsterra";
 import {ArticleVisual} from "@/components/article-visual";
 import {EditorialPicks} from "@/components/editor-picks";
 import {SITE_URL} from "@/lib/site";
@@ -134,7 +133,6 @@ export default function Home(){
       </article>
      ))}
     </div>
-    <div className="home-inline-ad"><ResponsiveLeaderboard slot="home-top-after-feature"/></div>
    </div>
   </section>
 
