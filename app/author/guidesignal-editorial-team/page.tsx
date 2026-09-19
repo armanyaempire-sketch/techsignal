@@ -1,6 +1,6 @@
 import {JsonLd} from "@/components/json-ld";
 
-export const metadata={title:"GuideSignal Editorial Team",description:"Meet the GuideSignal Editorial Team and learn how articles are researched, reviewed and updated."};
+export const metadata={title:"GuideSignal Editorial Team",description:"Meet the GuideSignal Editorial Team and learn how articles are researched, reviewed and updated.",alternates:{canonical:"/author/guidesignal-editorial-team/"},openGraph:{type:"website",siteName:"GuideSignal",title:"GuideSignal Editorial Team",description:"How GuideSignal articles are researched, reviewed and updated.",url:"/author/guidesignal-editorial-team/"}};
 
 export default function Author(){
   const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
