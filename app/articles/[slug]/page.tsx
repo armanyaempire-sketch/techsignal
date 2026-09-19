@@ -13,7 +13,27 @@ export function generateStaticParams(){return getAllArticles().map(a=>({slug:a.s
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)return{};
  const base=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
- return{title:a.title,description:a.description,keywords:a.keywords,alternates:{canonical:base+"/articles/"+a.slug+"/"},openGraph:{type:"article",title:a.title,description:a.description,url:base+"/articles/"+a.slug+"/"}};
+ const url=base+"/articles/"+a.slug+"/";
+ return{
+  title:a.title,
+  description:a.description,
+  keywords:a.keywords,
+  authors:[{name:"GuideSignal Editorial Team",url:base+"/author/guidesignal-editorial-team/"}],
+  alternates:{canonical:url},
+  openGraph:{
+   type:"article",
+   siteName:"GuideSignal",
+   title:a.title,
+   description:a.description,
+   url,
+   publishedTime:a.date,
+   modifiedTime:a.updated,
+   authors:["GuideSignal Editorial Team"],
+   section:a.categoryName,
+   tags:a.keywords
+  },
+  twitter:{card:"summary",title:a.title,description:a.description}
+ };
 }
 export default async function ArticlePage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)notFound();
