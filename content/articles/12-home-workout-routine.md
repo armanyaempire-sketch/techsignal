@@ -112,7 +112,7 @@ Do not use a generic workout article to self-manage a significant injury or unex
 
 ## Continue your research
 
-For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/). For a related topic, see our [beginner skincare routine](/articles/14-simple-skincare-routine/).
+For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/).
 
 ## Bottom line
 

@@ -123,7 +123,7 @@ The purpose is to help buyers evaluate an offer against their own numbers and re
 
 ## Continue your research
 
-For a related topic, see our [one-person online business guide](/articles/03-one-person-online-business/). For a related topic, see our [digital marketing funnel guide](/articles/04-digital-marketing-funnels/). For a related topic, see our [AI tools for small businesses](/articles/10-best-ai-small-business-tools/).
+For a related topic, see our [one-person online business guide](/articles/03-one-person-online-business/).
 
 ## Bottom line
 

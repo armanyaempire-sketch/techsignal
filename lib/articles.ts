@@ -9,20 +9,20 @@ export function getAllArticles(){if(!fs.existsSync(DIR))return[];return fs.readd
 export function getArticleBySlug(slug:string){return getAllArticles().find(x=>x.slug===slug);}
 export function getArticlesByCategory(category:string){return getAllArticles().filter(x=>x.category===category);}
 export function getRelatedArticles(current:Article,limit=4){
- const stageRank:FunnelStage={TOFU:"TOFU",MOFU:"MOFU",BOFU:"BOFU"};
  const rank=(s:FunnelStage)=>s==="TOFU"?0:s==="MOFU"?1:2;
- const currentRank=rank(current.stage);
  return getAllArticles()
   .filter(x=>x.slug!==current.slug)
   .map(x=>{
-   const sameCategory=x.category===current.category?6:0;
-   const sameStage=x.stage===current.stage?1:0;
-   const distance=Math.abs(rank(x.stage)-currentRank);
-   const adjacentStage=distance===1?3:0;
+   const sameCategory=x.category===current.category;
    const overlap=x.keywords.filter(k=>current.keywords.some(c=>c.toLowerCase()===k.toLowerCase())).length;
-   return{article:x,score:sameCategory+sameStage+adjacentStage+Math.min(overlap*2,6)};
+   const sameStage=x.stage===current.stage;
+   const adjacentStage=Math.abs(rank(x.stage)-rank(current.stage))===1;
+   const crossCategoryStrong=!sameCategory&&overlap>=2;
+   const score=(sameCategory?8:0)+(overlap*3)+(sameStage?1:0)+(adjacentStage&&sameCategory?2:0)+(crossCategoryStrong?1:0);
+   return{article:x,score};
   })
-  .sort((a,b)=>b.score-a.score||b.article.date.localeCompare(a.article.date))
+  .filter(x=>x.score>0)
+  .sort((a,b)=>b.score-a.score||b.article.updated.localeCompare(a.article.updated))
   .slice(0,limit)
   .map(x=>x.article);
 }

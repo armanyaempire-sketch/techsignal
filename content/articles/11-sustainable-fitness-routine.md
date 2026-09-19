@@ -101,7 +101,7 @@ The exact schedule is less important than choosing something you can repeat and 
 
 ## Continue your research
 
-For a related topic, see our [home workout routine](/articles/12-home-workout-routine/). For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/). For a related topic, see our [oral-care supplement buying guide](/articles/16-prodentim-buying-guide/).
+For a related topic, see our [home workout routine](/articles/12-home-workout-routine/). For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/).
 
 ## Bottom line
 

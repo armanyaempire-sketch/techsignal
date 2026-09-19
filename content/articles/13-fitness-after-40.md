@@ -105,7 +105,7 @@ The most useful question is not "Why can't I stick to this?" It is "What made th
 
 ## Continue your research
 
-For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [home workout routine](/articles/12-home-workout-routine/). For a related topic, see our [ProstaVive buying guide](/articles/19-prostavive-buying-guide/).
+For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [home workout routine](/articles/12-home-workout-routine/).
 
 ## Bottom line
 

@@ -115,7 +115,7 @@ The product-specific facts should be checked against the current seller informat
 
 ## Continue your research
 
-For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/). For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [ProDentim buying guide](/articles/16-prodentim-buying-guide/).
+For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/).
 
 ## Bottom line
 

@@ -92,7 +92,7 @@ Not everyone needs every step every day. The right routine depends on the person
 
 ## Continue your research
 
-For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [Audifort buying guide](/articles/20-audifort-buying-guide/).
+For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/).
 
 ## Bottom line
 

@@ -98,7 +98,7 @@ The goal is to help a buyer ask better questions before ordering.
 
 ## Continue your research
 
-For a related topic, see our [beginner skincare routine](/articles/14-simple-skincare-routine/). For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [ProstaVive buying guide](/articles/19-prostavive-buying-guide/).
+For a related topic, see our [beginner skincare routine](/articles/14-simple-skincare-routine/).
 
 ## Bottom line
 

@@ -113,7 +113,7 @@ The purpose of this page is to help a buyer distinguish product information from
 
 ## Continue your research
 
-For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [ProDentim buying guide](/articles/16-prodentim-buying-guide/).
+For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/).
 
 ## Bottom line
 
