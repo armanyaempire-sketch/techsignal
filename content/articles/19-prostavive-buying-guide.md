@@ -10,7 +10,7 @@ updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: ProstaVive, prostate health supplement, men's health supplement, ProstaVive review, supplement buying guide
 offerKey: prostavive
-sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/drugs/resources-drugs/drug-interactions-what-you-should-know
+sources: https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements|https://www.fda.gov/drugs/resources-drugs/drug-interactions-what-you-should-know|https://www.nccih.nih.gov/health/mens-health
 ---
 
 Shopping for a men's-health supplement requires more than reading the headline on a sales page. A responsible buying process checks the current label, the seller's claims, personal fit, total cost and the terms of the transaction.
@@ -116,6 +116,22 @@ The product-specific facts should be checked against the current seller informat
 ## Continue your research
 
 For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/).
+
+## A side-by-side research worksheet
+
+Use the same fields for ProstaVive and any alternative rather than comparing marketing headlines.
+
+| Factor | Product A | Product B |
+|---|---|---|
+| Supplement Facts | Current label | Current label |
+| Ingredient amounts | Record disclosed amounts | Record disclosed amounts |
+| Exact claims | Quote the current claim | Quote the current claim |
+| Product-specific evidence | Identify supporting evidence | Identify supporting evidence |
+| Cost per serving | Calculate from current terms | Calculate from current terms |
+| Recurring billing | Yes / no / unclear | Yes / no / unclear |
+| Refund policy | Current seller policy | Current seller policy |
+
+The NIH's NCCIH notes that many supplements marketed for men's health have not been shown to be safe or effective, and evidence can differ by ingredient and condition. That is one reason a finished-product claim should not be treated as proven merely because an ingredient has been studied.
 
 ## Bottom line
 
