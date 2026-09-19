@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export function Footer(){
+ const labelStyle={color:"#cbd8ff",marginBottom:8};
  return <footer className="site-footer">
   <div className="container footer-grid">
    <div className="footer-brand">
@@ -13,7 +14,7 @@ export function Footer(){
     </div>
    </div>
    <div>
-    <div className="eyebrow">Explore</div>
+    <div className="eyebrow" style={labelStyle}>Explore</div>
     <div className="footer-links">
      <Link prefetch={false} href="/about/">About</Link>
      <Link prefetch={false} href="/contact/">Contact</Link>
@@ -21,7 +22,7 @@ export function Footer(){
     </div>
    </div>
    <div>
-    <div className="eyebrow">Trust & policies</div>
+    <div className="eyebrow" style={labelStyle}>Trust & policies</div>
     <div className="footer-links">
      <Link prefetch={false} href="/editorial-policy/">Editorial Policy</Link>
      <Link prefetch={false} href="/disclosure/">Disclosure</Link>
