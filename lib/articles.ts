@@ -8,6 +8,23 @@ function read(file:string):Article{const {data,body}=parse(fs.readFileSync(path.
 export function getAllArticles(){if(!fs.existsSync(DIR))return[];return fs.readdirSync(DIR).filter(x=>x.endsWith(".md")).map(read).sort((a,b)=>b.date.localeCompare(a.date));}
 export function getArticleBySlug(slug:string){return getAllArticles().find(x=>x.slug===slug);}
 export function getArticlesByCategory(category:string){return getAllArticles().filter(x=>x.category===category);}
-export function getRelatedArticles(current:Article,limit=4){return getAllArticles().filter(x=>x.slug!==current.slug).map(x=>{const category=x.category===current.category?5:0;const stage=x.stage===current.stage?2:0;const overlap=x.keywords.filter(k=>current.keywords.some(c=>c.toLowerCase()===k.toLowerCase())).length;return{article:x,score:category+stage+Math.min(overlap,3)}}).sort((a,b)=>b.score-a.score||b.article.date.localeCompare(a.article.date)).slice(0,limit).map(x=>x.article);}
+export function getRelatedArticles(current:Article,limit=4){
+ const stageRank:FunnelStage={TOFU:"TOFU",MOFU:"MOFU",BOFU:"BOFU"};
+ const rank=(s:FunnelStage)=>s==="TOFU"?0:s==="MOFU"?1:2;
+ const currentRank=rank(current.stage);
+ return getAllArticles()
+  .filter(x=>x.slug!==current.slug)
+  .map(x=>{
+   const sameCategory=x.category===current.category?6:0;
+   const sameStage=x.stage===current.stage?1:0;
+   const distance=Math.abs(rank(x.stage)-currentRank);
+   const adjacentStage=distance===1?3:0;
+   const overlap=x.keywords.filter(k=>current.keywords.some(c=>c.toLowerCase()===k.toLowerCase())).length;
+   return{article:x,score:sameCategory+sameStage+adjacentStage+Math.min(overlap*2,6)};
+  })
+  .sort((a,b)=>b.score-a.score||b.article.date.localeCompare(a.article.date))
+  .slice(0,limit)
+  .map(x=>x.article);
+}
 export function getCategories():Array<{slug:string;name:string;short:string}>{return JSON.parse(fs.readFileSync(path.join(process.cwd(),"content","categories.json"),"utf8"));}
 export function getCategoryBySlug(slug:string){return getCategories().find(x=>x.slug===slug);}

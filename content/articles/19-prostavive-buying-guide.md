@@ -113,6 +113,10 @@ GuideSignal does not claim that ProstaVive prevents, treats or cures a prostate 
 
 The product-specific facts should be checked against the current seller information at the time of purchase.
 
+## Continue your research
+
+For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/). For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [ProDentim buying guide](/articles/16-prodentim-buying-guide/).
+
 ## Bottom line
 
 Compare the current label, exact claims, personal fit, full cost and seller terms before ordering ProstaVive. For health questions or persistent symptoms, separate the purchase decision from individualized medical care.

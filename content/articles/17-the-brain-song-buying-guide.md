@@ -113,6 +113,10 @@ There is no need to rush a digital purchase just because a timer or promotion cr
 
 This article does not claim that The Brain Song will improve memory, concentration or cognitive performance. It provides a framework for evaluating the offer and its claims.
 
+## Continue your research
+
+For a related topic, see our [AI content workflow guide](/articles/07-ai-content-workflow/). For a related topic, see our [AI affiliate tools comparison](/articles/09-best-ai-affiliate-tools/). For a related topic, see our [affiliate content funnel guide](/articles/08-affiliate-content-funnel/).
+
 ## Bottom line
 
 Compare the actual format, access requirements, claims, evidence, total cost and seller terms. Focus on whether the current offer fits your specific use case instead of relying on a broad promise about mental performance.

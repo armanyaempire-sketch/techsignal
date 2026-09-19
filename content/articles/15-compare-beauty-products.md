@@ -119,6 +119,10 @@ Pause when you cannot confirm the current ingredient list, total purchase cost, 
 
 A large discount does not make missing information less important.
 
+## Continue your research
+
+For a related topic, see our [beginner skincare routine](/articles/14-simple-skincare-routine/). For a related topic, see our [ProDentim buying guide](/articles/16-prodentim-buying-guide/). For a related topic, see our [ProstaVive buying guide](/articles/19-prostavive-buying-guide/).
+
 ## Bottom line
 
 Compare products against the same checklist: purpose, label, evidence, usability, total cost and seller terms. A useful buying guide should help you understand the trade-offs rather than telling you that every buyer needs the same product.

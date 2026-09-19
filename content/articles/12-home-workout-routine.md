@@ -110,6 +110,10 @@ People with chronic conditions, injuries, disabilities or other health considera
 
 Do not use a generic workout article to self-manage a significant injury or unexplained pain.
 
+## Continue your research
+
+For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/). For a related topic, see our [beginner skincare routine](/articles/14-simple-skincare-routine/).
+
 ## Bottom line
 
 A good home workout routine is simple enough to remember, safe enough to perform in your environment and flexible enough to survive real life. Start with your available time and equipment, use a few repeatable movement patterns, progress gradually and track what you can consistently complete.

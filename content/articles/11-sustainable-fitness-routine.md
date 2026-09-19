@@ -99,6 +99,10 @@ A practical starting structure could be:
 
 The exact schedule is less important than choosing something you can repeat and adjust.
 
+## Continue your research
+
+For a related topic, see our [home workout routine](/articles/12-home-workout-routine/). For a related topic, see our [fitness after 40 guide](/articles/13-fitness-after-40/). For a related topic, see our [oral-care supplement buying guide](/articles/16-prodentim-buying-guide/).
+
 ## Bottom line
 
 Build the routine around your real life, start at an appropriate level and make consistency easier through simple scheduling and preparation. Use gradual progression, protect recovery and treat missed sessions as something to manage rather than a reason to quit.

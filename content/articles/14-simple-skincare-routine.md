@@ -90,6 +90,10 @@ Do not keep adding products to "fix" irritation created by an earlier product. C
 
 Not everyone needs every step every day. The right routine depends on the person.
 
+## Continue your research
+
+For a related topic, see our [beauty product comparison guide](/articles/15-compare-beauty-products/). For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [Audifort buying guide](/articles/20-audifort-buying-guide/).
+
 ## Bottom line
 
 Start with fewer products, use them consistently and learn how your skin responds. Choose products based on your actual needs, read the label, be cautious with dramatic claims and make changes gradually.

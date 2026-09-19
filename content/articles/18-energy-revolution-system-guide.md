@@ -121,6 +121,10 @@ This article does not claim that the Energy Revolution System will reduce every 
 
 The purpose is to help buyers evaluate an offer against their own numbers and requirements.
 
+## Continue your research
+
+For a related topic, see our [one-person online business guide](/articles/03-one-person-online-business/). For a related topic, see our [digital marketing funnel guide](/articles/04-digital-marketing-funnels/). For a related topic, see our [AI tools for small businesses](/articles/10-best-ai-small-business-tools/).
+
 ## Bottom line
 
 Identify the actual product, compare the seller's assumptions with your own energy use, calculate the full project cost and verify compatibility and local requirements before purchasing. Treat savings estimates as estimates rather than promises.

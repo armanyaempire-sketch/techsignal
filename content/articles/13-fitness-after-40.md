@@ -103,6 +103,10 @@ Missing several workouts is not a reason to restart from zero. Return with a man
 
 The most useful question is not "Why can't I stick to this?" It is "What made this routine difficult to repeat, and how can I remove that obstacle?"
 
+## Continue your research
+
+For a related topic, see our [sustainable fitness routine](/articles/11-sustainable-fitness-routine/). For a related topic, see our [home workout routine](/articles/12-home-workout-routine/). For a related topic, see our [ProstaVive buying guide](/articles/19-prostavive-buying-guide/).
+
 ## Bottom line
 
 Fitness after 40 can be built around the same principles that make exercise sustainable at any age: realistic scheduling, regular aerobic activity, strength work, gradual progression and adequate recovery. Build a routine that matches your current life instead of trying to recreate someone else's program.
