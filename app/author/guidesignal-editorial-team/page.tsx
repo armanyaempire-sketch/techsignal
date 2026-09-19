@@ -51,5 +51,5 @@ export default function Author(){
   <p>GuideSignal does not imply professional licensure, clinical treatment, personal product testing or guaranteed business results unless a page explicitly documents a verifiable basis for such a statement.</p>
 
   <p className="muted">Editorial profile reviewed: {EDITORIAL_REVIEW_DATE}. Public source repository: <a href={PUBLIC_REPOSITORY} target="_blank" rel="noopener noreferrer">GitHub / techsignal</a>.</p>
- </div></div>;
+ </div></div></>;
 }
