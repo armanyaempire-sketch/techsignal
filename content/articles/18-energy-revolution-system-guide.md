@@ -9,7 +9,6 @@ date: 2026-09-19
 updated: 2026-09-19
 author: GuideSignal Editorial Team
 keywords: Energy Revolution System, alternative energy, home energy program, energy savings, energy system guide
-offerKey: enrev
 sources: https://www.energy.gov/energysaver|https://www.energy.gov/energysaver/home-energy-audits
 ---
 
