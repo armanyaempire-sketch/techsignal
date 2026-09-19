@@ -1,3 +1,28 @@
 function esc(v:string){return v.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");}
-function inline(v:string){let x=esc(v);x=x.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");x=x.replace(/\*(.+?)\*/g,"<em>$1</em>");x=x.replace(/\[(.+?)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');return x;}
-export function markdownToHtml(md:string){const lines=md.replace(/\r\n/g,"\n").split("\n");const out:string[]=[];let p:string[]=[];let list:"ul"|"ol"|null=null;const fp=()=>{if(p.length)out.push("<p>"+p.join(" ").trim()+"</p>");p=[]};const fl=()=>{if(!list)return;out.push(list==="ul"?"</ul>":"</ol>");list=null;};for(const line of lines){if(!line.trim()){fp();fl();continue;}if(/^###\s+/.test(line)){fp();fl();out.push("<h3>"+inline(line.replace(/^###\s+/,""))+"</h3>");continue;}if(/^##\s+/.test(line)){fp();fl();out.push("<h2>"+inline(line.replace(/^##\s+/,""))+"</h2>");continue;}if(/^#\s+/.test(line)){fp();fl();out.push("<h2>"+inline(line.replace(/^#\s+/,""))+"</h2>");continue;}if(/^>\s?/.test(line)){fp();fl();out.push("<blockquote>"+inline(line.replace(/^>\s?/,""))+"</blockquote>");continue;}if(/^-\s+/.test(line)){fp();if(list!=="ul"){fl();out.push("<ul>");list="ul"}out.push("<li>"+inline(line.replace(/^-\s+/,""))+"</li>");continue;}if(/^\d+\.\s+/.test(line)){fp();if(list!=="ol"){fl();out.push("<ol>");list="ol"}out.push("<li>"+inline(line.replace(/^\d+\.\s+/,""))+"</li>");continue;}p.push(inline(line.trim()));}fp();fl();return out.join("\n");}
+function inline(v:string){
+  let x=esc(v);
+  x=x.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
+  x=x.replace(/\*(.+?)\*/g,"<em>$1</em>");
+  x=x.replace(/\[(.+?)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g,(_,label,url)=>{
+    if(url.startsWith("/"))return '<a href="'+url+'">'+label+"</a>";
+    return '<a href="'+url+'" target="_blank" rel="noopener noreferrer">'+label+"</a>";
+  });
+  return x;
+}
+export function markdownToHtml(md:string){
+  const lines=md.replace(/\r\n/g,"\n").split("\n");
+  const out:string[]=[];let p:string[]=[];let list:"ul"|"ol"|null=null;
+  const fp=()=>{if(p.length)out.push("<p>"+p.join(" ").trim()+"</p>");p=[]};
+  const fl=()=>{if(!list)return;out.push(list==="ul"?"</ul>":"</ol>");list=null;};
+  for(const line of lines){
+    if(!line.trim()){fp();fl();continue;}
+    if(/^###\s+/.test(line)){fp();fl();out.push("<h3>"+inline(line.replace(/^###\s+/,""))+"</h3>");continue;}
+    if(/^##\s+/.test(line)){fp();fl();out.push("<h2>"+inline(line.replace(/^##\s+/,""))+"</h2>");continue;}
+    if(/^#\s+/.test(line)){fp();fl();out.push("<h2>"+inline(line.replace(/^#\s+/,""))+"</h2>");continue;}
+    if(/^>\s?/.test(line)){fp();fl();out.push("<blockquote>"+inline(line.replace(/^>\s?/,""))+"</blockquote>");continue;}
+    if(/^-\s+/.test(line)){fp();if(list!=="ul"){fl();out.push("<ul>");list="ul"}out.push("<li>"+inline(line.replace(/^-\s+/,""))+"</li>");continue;}
+    if(/^\d+\.\s+/.test(line)){fp();if(list!=="ol"){fl();out.push("<ol>");list="ol"}out.push("<li>"+inline(line.replace(/^\d+\.\s+/,""))+"</li>");continue;}
+    p.push(inline(line.trim()));
+  }
+  fp();fl();return out.join("\n");
+}
