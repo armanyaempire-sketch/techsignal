@@ -1,7 +1,8 @@
 import type {Metadata} from "next";
 import Link from "next/link";
-import {getAllArticles,getCategories} from "@/lib/articles";
+import {getAllArticles,getArticlesByCategory,getCategories} from "@/lib/articles";
 import {JsonLd} from "@/components/json-ld";
+import {ResponsiveLeaderboard} from "@/components/adsterra";
 
 export const metadata:Metadata={
  title:"Practical Guides on AI, Online Business, Health & Wellness",
@@ -24,14 +25,19 @@ export const metadata:Metadata={
 const topSlugs=[
  "01-ai-small-business-marketing",
  "11-sustainable-fitness-routine",
- "14-simple-skincare-routine"
+ "14-simple-skincare-routine",
+ "09-best-ai-affiliate-tools",
+ "12-home-workout-routine"
 ];
 
 export default function Home(){
  const allArticles=getAllArticles();
  const categories=getCategories();
  const topArticles=topSlugs.map(slug=>allArticles.find(a=>a.slug===slug)).filter(Boolean);
- const latestArticles=allArticles.filter(a=>!topSlugs.includes(a.slug)).slice(0,8);
+ const latestByCategory=categories.map(c=>({
+  ...c,
+  articles:getArticlesByCategory(c.slug).filter(a=>!topSlugs.includes(a.slug)).slice(0,3)
+ }));
  const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";
  const data={
   "@context":"https://schema.org",
@@ -60,6 +66,7 @@ export default function Home(){
    url:siteUrl+"/articles/"+a!.slug+"/"
   }))
  };
+
  return <>
   <JsonLd data={[data,organization,topItemList]}/>
 
@@ -99,13 +106,13 @@ export default function Home(){
      <div>
       <span className="eyebrow">Editor's picks</span>
       <h2>Top Articles</h2>
-      <p className="section-intro">Three cornerstone guides covering the topics readers most often use GuideSignal to research.</p>
+      <p className="section-intro">Five standout guides across all three GuideSignal desks, giving visitors an immediate path into the site's strongest topics.</p>
      </div>
     </div>
     <div className="top-articles-grid">
      {topArticles.map((a,i)=>a&&(
       <article className={"top-article-card top-article-"+(i+1)} key={a.slug}>
-       <div className="top-article-number">0{i+1}</div>
+       <div className="top-article-number">{String(i+1).padStart(2,"0")}</div>
        <div className="meta">{a.categoryName} · {a.stage}</div>
        <h3><Link prefetch={false} href={"/articles/"+a.slug+"/"}>{a.title}</Link></h3>
        <p>{a.description}</p>
@@ -113,6 +120,7 @@ export default function Home(){
       </article>
      ))}
     </div>
+    <div className="home-inline-ad"><ResponsiveLeaderboard slot="home-top-after-feature"/></div>
    </div>
   </section>
 
@@ -126,7 +134,7 @@ export default function Home(){
      </div>
     </div>
     <div className="category-showcase">
-     {categories.map((c)=>(
+     {categories.map(c=>(
       <Link className={"category-showcase-card category-showcase-"+c.slug} key={c.slug} href={"/category/"+c.slug+"/"} prefetch={false}>
        <div className="category-showcase-head">
         <span className="eyebrow">{c.name}</span>
@@ -145,18 +153,35 @@ export default function Home(){
    <div className="container">
     <div className="section-header">
      <div>
-      <span className="eyebrow">Fresh from the desk</span>
+      <span className="eyebrow">Fresh from every desk</span>
       <h2>Latest Guides</h2>
-      <p className="section-intro">New and recently updated practical guides, with the article title always acting as the main entry point.</p>
+      <p className="section-intro">Browse the newest practical guides by desk so no part of GuideSignal disappears behind a single mixed feed.</p>
      </div>
     </div>
-    <div className="latest-editorial-grid">
-     {latestArticles.map(a=>(
-      <article className="latest-editorial-card" key={a.slug}>
-       <div className="meta">{a.categoryName} · {a.stage}</div>
-       <h3><Link prefetch={false} href={"/articles/"+a.slug+"/"}>{a.title}</Link></h3>
-       <p>{a.description}</p>
-      </article>
+    <div className="latest-desk-sections">
+     {latestByCategory.map(desk=>(
+      <section className={"latest-desk latest-desk-"+desk.slug} key={desk.slug}>
+       <div className="latest-desk-header">
+        <div>
+         <span className="eyebrow">{desk.name}</span>
+         <h3>{desk.name}</h3>
+         <p>{desk.short}</p>
+        </div>
+        <Link className="text-link" prefetch={false} href={"/category/"+desk.slug+"/"}>View all →</Link>
+       </div>
+       {desk.articles.length>0?(
+        <div className="latest-editorial-grid">
+         {desk.articles.map(a=>(
+          <article className="latest-editorial-card" key={a.slug}>
+           <div className="meta">{a.stage} · {a.intent}</div>
+           <h4><Link prefetch={false} href={"/articles/"+a.slug+"/"}>{a.title}</Link></h4>
+           <p>{a.description}</p>
+           <Link className="text-link" prefetch={false} href={"/articles/"+a.slug+"/"}>Read guide →</Link>
+          </article>
+         ))}
+        </div>
+       ):<p className="latest-empty">New guides for this desk are in the editorial queue.</p>}
+      </section>
      ))}
     </div>
    </div>
