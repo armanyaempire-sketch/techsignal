@@ -13,16 +13,17 @@ import {JsonLd} from "@/components/json-ld";
 import {ReadingProgress} from "@/components/reading-progress";
 import {FunnelBridge} from "@/components/funnel-bridge";
 import {ArticleVisual} from "@/components/article-visual";
+import {SITE_URL} from "@/lib/site";
 
 export function generateStaticParams(){return getAllArticles().map(a=>({slug:a.slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)return{};
- const base=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";const url=base+"/articles/"+a.slug+"/";
+ const base=SITE_URL;const url=base+"/articles/"+a.slug+"/";
  return{title:a.title,description:a.description,keywords:a.keywords,authors:[{name:"GuideSignal Editorial Team",url:base+"/author/guidesignal-editorial-team/"}],alternates:{canonical:url},openGraph:{type:"article",siteName:"GuideSignal",title:a.title,description:a.description,url,publishedTime:a.date,modifiedTime:a.updated,authors:["GuideSignal Editorial Team"],section:a.categoryName,tags:a.keywords},twitter:{card:"summary",title:a.title,description:a.description}};
 }
 export default async function ArticlePage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const a=getArticleBySlug(slug);if(!a)notFound();
- const related=getRelatedArticles(a,4);const siteUrl=process.env.NEXT_PUBLIC_SITE_URL||"https://guidesignal.vercel.app";const articleUrl=siteUrl+"/articles/"+a.slug+"/";
+ const related=getRelatedArticles(a,4);const siteUrl=SITE_URL;const articleUrl=siteUrl+"/articles/"+a.slug+"/";
  const totalWords=a.body.trim().split(/\s+/).filter(Boolean).length;
  const articleSchema={"@context":"https://schema.org","@type":"Article","headline":a.title,"description":a.description,"datePublished":a.date,"dateModified":a.updated,"inLanguage":"en","wordCount":totalWords,"isAccessibleForFree":true,"mainEntityOfPage":{"@type":"WebPage","@id":articleUrl},"author":{"@type":"Organization","name":"GuideSignal Editorial Team","url":siteUrl+"/author/guidesignal-editorial-team/"},"publisher":{"@type":"Organization","@id":siteUrl+"#organization","name":"GuideSignal","url":siteUrl},"articleSection":a.categoryName,"keywords":a.keywords};
  const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":a.categoryName,"item":siteUrl+"/category/"+a.category+"/"},{"@type":"ListItem","position":3,"name":a.title,"item":articleUrl}]};
