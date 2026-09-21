@@ -76,7 +76,7 @@ A sensible evaluation therefore separates three questions:
 
 **Transaction question:** What are the current price, billing, shipping and refund terms?
 
-Our [ProDentim research page](/products/prodentim/) follows that structure.
+Our [ProDentim research page](/health-fitness/products/prodentim/) follows that structure.
 
 ## What should you look for on the label?
 
@@ -124,7 +124,7 @@ If several of those questions remain unanswered, the rational status is **needs 
 
 When a reader is specifically considering ProDentim, the next step should be a product-specific breakdown rather than another generic article.
 
-Our [ProDentim: what the seller claims and what to check before buying](/products/prodentim/) covers the product, seller claims, evidence, buyer cautions and transaction checks.
+Our [ProDentim: what the seller claims and what to check before buying](/health-fitness/products/prodentim/) covers the product, seller claims, evidence, buyer cautions and transaction checks.
 
 ## Bottom line
 
