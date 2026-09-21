@@ -4,6 +4,7 @@ description: Bleeding gums can have several causes. This practical guide explain
 category: health-fitness
 categoryName: Health & Fitness
 stage: TOFU
+cluster: oral-health-prodentim
 intent: informational
 date: 2026-09-22
 updated: 2026-09-22
