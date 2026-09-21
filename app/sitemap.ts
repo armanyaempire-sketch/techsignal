@@ -17,6 +17,7 @@ export default function sitemap():MetadataRoute.Sitemap{
    return{url:SITE_URL+"/category/"+c.slug+"/",lastModified};
   }),
   ...articles.map(a=>({url:SITE_URL+"/articles/"+a.slug+"/",lastModified:a.updated})),
+  {url:SITE_URL+"/products/prodentim/",lastModified:EDITORIAL_REVIEW_ISO},
   ...trustPages.map(p=>({url:SITE_URL+"/"+p+"/",lastModified:EDITORIAL_REVIEW_ISO}))
  ];
 }
