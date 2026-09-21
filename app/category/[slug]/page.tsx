@@ -81,6 +81,8 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
       </section>
      ))}
 
+     {slug==="health-fitness"&&<section className="category-trust-block"><div><span className="eyebrow">Featured product research</span><h2>ProDentim: buyer due diligence</h2><p>Review the seller’s current claims, label details and purchase terms before considering an oral-care supplement.</p></div><Link className="button button-secondary" prefetch={false} href="/products/prodentim/">Read the ProDentim research page →</Link></section>}
+
      <section className="category-trust-block">
       <div><span className="eyebrow">Editorial standard</span><h2>Source-aware guidance, not sales copy</h2><p>Commercial pages identify affiliate relationships and distinguish seller claims from independent evidence. Health and wellness pages remain general information and do not replace individualized professional advice.</p></div>
       <Link className="button button-secondary" prefetch={false} href="/editorial-policy/">Read the editorial policy</Link>
