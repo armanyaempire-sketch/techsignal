@@ -1,25 +1,27 @@
 import fs from "node:fs";
 import path from "node:path";
 export type FunnelStage="TOFU"|"MOFU"|"BOFU";
-export type Article={slug:string;title:string;description:string;category:string;categoryName:string;stage:FunnelStage;intent:string;date:string;updated:string;author:string;keywords:string[];offerKey?:string;sources:string[];body:string};
+export type Article={slug:string;title:string;description:string;category:string;categoryName:string;stage:FunnelStage;intent:string;cluster?:string;date:string;updated:string;author:string;keywords:string[];offerKey?:string;sources:string[];body:string};
 export type ArticleFaq={question:string;answer:string};
 const DIR=path.join(process.cwd(),"content","articles");
 function parse(raw:string){const t=raw.replace(/\r\n/g,"\n");if(!t.startsWith("---\n"))return{data:{},body:t};const end=t.indexOf("\n---\n",4);if(end<0)return{data:{},body:t};const data:Record<string,string>={};for(const line of t.slice(4,end).split("\n")){const i=line.indexOf(":");if(i<0)continue;data[line.slice(0,i).trim()]=line.slice(i+1).trim();}return{data,body:t.slice(end+5).trim()};}
-function read(file:string):Article{const {data,body}=parse(fs.readFileSync(path.join(DIR,file),"utf8"));return{slug:file.replace(/\.md$/,""),title:data.title??file,description:data.description??"",category:data.category??"e-business",categoryName:data.categoryName??"E-Business & E-Marketing",stage:(data.stage as FunnelStage)??"TOFU",intent:data.intent??"informational",date:data.date??"2026-09-19",updated:data.updated??data.date??"2026-09-19",author:data.author??"GuideSignal Editorial Team",keywords:(data.keywords??"").split(",").map(x=>x.trim()).filter(Boolean),offerKey:data.offerKey||undefined,sources:(data.sources??"").split("|").map(x=>x.trim()).filter(Boolean),body};}
+function read(file:string):Article{const {data,body}=parse(fs.readFileSync(path.join(DIR,file),"utf8"));return{slug:file.replace(/\.md$/,""),title:data.title??file,description:data.description??"",category:data.category??"e-business",categoryName:data.categoryName??"E-Business & E-Marketing",stage:(data.stage as FunnelStage)??"TOFU",intent:data.intent??"informational",cluster:data.cluster||undefined,date:data.date??"2026-09-19",updated:data.updated??data.date??"2026-09-19",author:data.author??"GuideSignal Editorial Team",keywords:(data.keywords??"").split(",").map(x=>x.trim()).filter(Boolean),offerKey:data.offerKey||undefined,sources:(data.sources??"").split("|").map(x=>x.trim()).filter(Boolean),body};}
 export function getAllArticles(){if(!fs.existsSync(DIR))return[];return fs.readdirSync(DIR).filter(x=>x.endsWith(".md")).map(read).filter(a=>!a.offerKey).sort((a,b)=>b.date.localeCompare(a.date));}
 export function getArticleBySlug(slug:string){return getAllArticles().find(x=>x.slug===slug);}
 export function getArticlesByCategory(category:string){return getAllArticles().filter(x=>x.category===category);}
 export function getRelatedArticles(current:Article,limit=4){
  const rank=(s:FunnelStage)=>s==="TOFU"?0:s==="MOFU"?1:2;
- return getAllArticles()
-  .filter(x=>x.slug!==current.slug)
+ const candidates=getAllArticles().filter(x=>x.slug!==current.slug);
+ const scoped=current.cluster
+  ? candidates.filter(x=>x.cluster===current.cluster)
+  : candidates;
+ return scoped
   .map(x=>{
    const sameCategory=x.category===current.category;
    const overlap=x.keywords.filter(k=>current.keywords.some(c=>c.toLowerCase()===k.toLowerCase())).length;
    const sameStage=x.stage===current.stage;
    const adjacentStage=Math.abs(rank(x.stage)-rank(current.stage))===1;
-   const crossCategoryStrong=!sameCategory&&overlap>=2;
-   const score=(sameCategory?8:0)+(overlap*3)+(sameStage?1:0)+(adjacentStage&&sameCategory?2:0)+(crossCategoryStrong?1:0);
+   const score=(sameCategory?8:0)+(overlap*3)+(sameStage?1:0)+(adjacentStage&&sameCategory?2:0);
    return{article:x,score};
   })
   .filter(x=>x.score>0)
