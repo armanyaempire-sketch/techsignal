@@ -4,6 +4,7 @@ description: A practical evidence-aware guide to oral probiotics, including what
 category: health-fitness
 categoryName: Health & Fitness
 stage: MOFU
+cluster: oral-health-prodentim
 intent: informational-commercial
 date: 2026-09-22
 updated: 2026-09-22
