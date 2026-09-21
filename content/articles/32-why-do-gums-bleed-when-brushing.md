@@ -38,6 +38,15 @@ Start with the basics.
 
 These observations are useful because they help separate a routine-habit question from a problem that deserves professional evaluation.
 
+
+| What you notice | What it may help you assess | What to do next |
+|---|---|---|
+| Occasional mild bleeding | Whether cleaning habits recently changed | Use gentle brushing and consistent interdental cleaning |
+| Bleeding that keeps returning | Possible ongoing gum inflammation or another issue | Arrange an appropriate dental evaluation |
+| Bleeding with swelling or significant pain | A potentially more serious oral-health problem | Seek professional dental care promptly |
+| Bleeding plus loose teeth or gum recession | Possible periodontal disease signs | Seek professional assessment rather than self-treating |
+
+
 ## When bleeding gums deserve professional attention
 
 The NIDCR notes that periodontal disease can progress from early gum inflammation to damage involving the tissues and bone supporting the teeth. Symptoms can include persistent bad breath, gum recession, loose or sensitive teeth and pain while chewing.
