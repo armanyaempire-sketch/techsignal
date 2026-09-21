@@ -290,3 +290,32 @@
     padding:12px 13px;
   }
 }
+
+/* GuideSignal final affiliate CTA */
+.affiliate-buy-now{
+  min-height:62px;
+  min-width:230px;
+  padding:15px 30px;
+  border-radius:18px;
+  background:#ffd21f;
+  color:#171717!important;
+  border:2px solid #e0b600;
+  font-size:19px;
+  font-weight:900;
+  letter-spacing:.01em;
+  box-shadow:0 10px 24px rgba(224,182,0,.24);
+}
+.affiliate-buy-now:hover{
+  text-decoration:none;
+  background:#ffdc3d;
+  color:#111!important;
+  transform:translateY(-1px);
+  box-shadow:0 13px 28px rgba(224,182,0,.3);
+}
+@media(max-width:700px){
+  .affiliate-card .affiliate-buy-now{
+    width:100%;
+    min-height:60px;
+    font-size:18px;
+  }
+}
