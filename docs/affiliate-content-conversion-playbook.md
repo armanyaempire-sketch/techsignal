@@ -122,7 +122,9 @@ Do not build a cluster when the only possible content is a rewritten merchant sa
 
 ## 10. CTA and Affiliate-Link Rules
 
-BOFU pages use 2–3 CTAs maximum.
+BOFU product-research pages use 2–3 CTAs maximum.
+
+Comparison / alternatives pages use affiliate CTAs only when they directly compare affiliate products. A comparison against non-affiliate alternatives may intentionally use **0 affiliate CTAs** and route readers to the dedicated BOFU product-research page. This is a deliberate funnel design, not a missing CTA.
 
 CTA #1 — contextual text link after enough product context.
 
