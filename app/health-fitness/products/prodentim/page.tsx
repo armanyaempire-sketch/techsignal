@@ -164,7 +164,7 @@ export default function ProDentimPage(){
       <p><a href="https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance" target="_blank" rel="noopener noreferrer">FTC: Health Products Compliance Guidance</a></p>
      </div>
 
-     <AffiliateCTA articleSlug="prodentim-product-page" position="product-final" offerKey="prodentim" variant="card" label="Check Current ProDentim Offer →"/>
+     <AffiliateCTA articleSlug="prodentim-product-page" position="product-final" offerKey="prodentim" variant="card" label="Buy Now →"/>
     </main>
 
     <aside className="sidebar">
