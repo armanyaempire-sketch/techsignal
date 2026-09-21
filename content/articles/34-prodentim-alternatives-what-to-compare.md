@@ -34,6 +34,16 @@ The better sequence is:
 
 **problem → appropriate care → optional product research**
 
+## Quick decision matrix
+
+| Reader objective | First thing to investigate | Where a supplement fits |
+|---|---|---|
+| Bleeding gums | Cause of gum inflammation and oral hygiene | Optional research topic, not a diagnosis or treatment |
+| Persistent tooth pain | Dental evaluation | Not a substitute for evaluation |
+| General oral wellness | Routine oral-care habits | Optional product category to research |
+| Cosmetic whitening | Evidence-based whitening options | Depends on the product and goal |
+| Comparing oral probiotics | Strain, dose, evidence and transaction terms | Product-specific comparison |
+
 ## Comparison at a glance
 
 | Factor | ProDentim | Daily oral hygiene | Professional dental care | Other oral-care supplement |
