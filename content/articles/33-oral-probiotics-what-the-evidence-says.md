@@ -50,6 +50,17 @@ A useful comparison asks:
 
 These distinctions prevent a common affiliate-marketing mistake: taking evidence for a general category and presenting it as proof for one branded formula.
 
+
+| Evidence question | Why it matters | What a buyer should record |
+|---|---|---|
+| Which strain was studied? | Effects can differ by strain | Exact strain name |
+| What dose was used? | Research results may depend on dose | Amount / CFU or serving information |
+| What outcome was measured? | Gum bleeding, plaque and other outcomes are not interchangeable | Exact studied outcome |
+| Who was studied? | Results may not generalize to every population | Participant characteristics |
+| How long was it used? | Short and long interventions can produce different evidence | Study duration |
+| Was standard dental care also used? | A probiotic may have been an adjunct rather than a replacement | Treatment context |
+
+
 ## What the evidence does not prove
 
 Research on probiotics does not establish that a specific consumer supplement will:
