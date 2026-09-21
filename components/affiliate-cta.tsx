@@ -48,7 +48,7 @@ export function AffiliateCTA({articleSlug,position,offerKey,variant="card",label
 
   const name=offer?.name||"the current offer";
   const anchor=<a
-    className={(variant==="text"?"text-link":"button")+(position==="product-final"?" affiliate-buy-now":"")}
+    className={(variant==="text"?"text-link":"button")+((position==="product-final"||position==="comparison-final")?" affiliate-buy-now":"")}
     data-affiliate
     href={url.toString()}
     target="_blank"
