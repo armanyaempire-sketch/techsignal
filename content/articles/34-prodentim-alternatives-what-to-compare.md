@@ -52,7 +52,7 @@ ProDentim is marketed as an oral-care probiotic supplement. The seller's materia
 
 The research task is not to repeat those claims. It is to verify the current label, identify which claims come from the seller, and compare those claims with independent evidence.
 
-Our [ProDentim research page](/products/prodentim/) records that distinction in detail.
+Our [ProDentim research page](/health-fitness/products/prodentim/) records that distinction in detail.
 
 ## Alternative 1: improve the oral-care routine
 
@@ -142,4 +142,4 @@ If those questions are answered clearly, a product comparison has done its job.
 
 ProDentim is one oral-care option to research, not a replacement for diagnosing or treating dental problems. The strongest comparison is not product-versus-product alone; it is product-versus-the-actual solution the reader needs.
 
-For a product-specific breakdown, see the [ProDentim research page](/products/prodentim/).
+For a product-specific breakdown, see the [ProDentim research page](/health-fitness/products/prodentim/).
