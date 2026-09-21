@@ -90,7 +90,7 @@ Once you reach the commercial research stage, compare the same factors across pr
 - Seller identity and support
 - Important cautions or interactions
 
-For example, our [ProDentim research page](/products/prodentim/) examines the seller's claims separately from the evidence and purchase terms.
+For example, our [ProDentim research page](/health-fitness/products/prodentim/) examines the seller's claims separately from the evidence and purchase terms.
 
 ## Bottom line
 
