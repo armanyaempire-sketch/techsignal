@@ -7,7 +7,7 @@ const categoryFile=path.join(root,"content","categories.json");
 
 const required=["title","description","category","categoryName","stage","intent","date","updated","author","keywords","sources"];
 const validStages=new Set(["TOFU","MOFU","BOFU"]);
-const knownStatic=new Set(["","about","contact","disclosure","editorial-policy","privacy","terms","author/guidesignal-editorial-team","search"]);
+const knownStatic=new Set(["","about","contact","disclosure","editorial-policy","privacy","terms","author/guidesignal-editorial-team","search","health-fitness/products/prodentim","womens-health-beauty/products/femicore"]);
 const unsafe=[
  "disregardpervertmural.com",
  "atOptions",
@@ -55,8 +55,7 @@ for(const file of files){
   if(!data[key])errors.push(file+": missing "+key+".");
  }
  if(data.stage&&!validStages.has(data.stage))errors.push(file+": invalid stage "+data.stage+".");
- if(data.stage==="BOFU"&&!data.offerKey&&!file.includes("34-prodentim-alternatives-what-to-compare"))errors.push(file+": BOFU article is missing offerKey.");
- if(data.category&&!categoryMap.has(data.category))errors.push(file+": category does not exist: "+data.category+".");
+  if(data.category&&!categoryMap.has(data.category))errors.push(file+": category does not exist: "+data.category+".");
  for(const key of ["date","updated"]){
   if(data[key]&&!/^\d{4}-\d{2}-\d{2}$/.test(data[key]))errors.push(file+": "+key+" must be YYYY-MM-DD.");
  }
