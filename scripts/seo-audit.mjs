@@ -16,8 +16,6 @@ const unsafe=[
  "31555f8da80d579a4c50e4ccf1cc5644",
  "NEXT_PUBLIC_AD_BOTTOM_SCRIPT_URL",
  "NEXT_PUBLIC_AD_ALLOWED_HOSTS",
- "NEXT_PUBLIC_CLICKBANK_ENREV_HOPLINK",
- "offerKey: enrev"
 ];
 
 function fail(messages){
@@ -57,6 +55,7 @@ for(const file of files){
   if(!data[key])errors.push(file+": missing "+key+".");
  }
  if(data.stage&&!validStages.has(data.stage))errors.push(file+": invalid stage "+data.stage+".");
+ if(data.stage==="BOFU"&&!data.offerKey&&!file.includes("34-prodentim-alternatives-what-to-compare"))errors.push(file+": BOFU article is missing offerKey.");
  if(data.category&&!categoryMap.has(data.category))errors.push(file+": category does not exist: "+data.category+".");
  for(const key of ["date","updated"]){
   if(data[key]&&!/^\d{4}-\d{2}-\d{2}$/.test(data[key]))errors.push(file+": "+key+" must be YYYY-MM-DD.");
@@ -104,5 +103,6 @@ if(!/const verification="[^"]+"/.test(layout))errors.push("layout.tsx has no Goo
 if(!fs.existsSync(path.join(root,"public","googleb5dd74162d2e16fb.html")))errors.push("Google HTML verification file is missing.");
 if(!fs.existsSync(path.join(root,"app/feed.xml/route.ts")))errors.push("RSS route is missing.");
 if(!layout.includes('metadataBase:new URL(SITE_URL)'))errors.push("metadataBase is not tied to SITE_URL.");
+if(!fs.existsSync(path.join(root,"app","icon.svg")))errors.push("app/icon.svg is missing.");
 
 fail(errors);

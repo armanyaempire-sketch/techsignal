@@ -11,10 +11,10 @@ const verification="TZ4UN7hYX8Xkb5NNifdkAeixecairRR0RqvKF3AeBKw";
 
 export const metadata:Metadata={
  metadataBase:new URL(SITE_URL),
- title:{default:"GuideSignal — Practical Guides for Smarter Choices",template:"%s | GuideSignal"},
- description:"Practical guides on AI, online business, health, fitness and women's wellness.",
+ title:{default:"GuideSignal — Practical, Source-Aware Guides",template:"%s | GuideSignal"},
+ description:"Practical, source-aware guides on AI, online business, health, fitness, skincare and women's wellness.",
  ...(verification?{verification:{google:verification}}:{}),
- robots:{index:true,follow:true},
+ robots:{index:true,follow:true,googleBot:{index:true,follow:true,"max-image-preview":"large","max-snippet":-1,"max-video-preview":-1}},
 };
 
 const organization={
