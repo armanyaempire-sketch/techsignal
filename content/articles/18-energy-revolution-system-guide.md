@@ -4,9 +4,11 @@ description: A practical checklist for researching Energy Revolution System offe
 category: e-business
 categoryName: E-Business & E-Marketing
 stage: BOFU
+cluster: home-energy-enrev
 intent: commercial-investigation
+offerKey: enrev
 date: 2026-09-19
-updated: 2026-09-19
+updated: 2026-09-25
 author: GuideSignal Editorial Team
 keywords: Energy Revolution System, alternative energy, home energy program, energy savings, energy system guide
 sources: https://www.energy.gov/energysaver|https://www.energy.gov/energysaver/home-energy-audits

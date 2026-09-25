@@ -4,9 +4,10 @@ description: A practical buyer's guide to comparing The Brain Song by format, ac
 category: health-fitness
 categoryName: Health & Fitness
 stage: BOFU
+cluster: focus-audio-brainsong
 intent: commercial-investigation
 date: 2026-09-19
-updated: 2026-09-19
+updated: 2026-09-25
 author: GuideSignal Editorial Team
 keywords: The Brain Song, focus audio, brain training audio, concentration products, focus product
 offerKey: brainsongx
