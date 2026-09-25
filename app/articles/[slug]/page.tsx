@@ -10,6 +10,7 @@ import {ArticleVisual,getArticleVisualFile} from "@/components/article-visual";
 import {SITE_URL} from "@/lib/site";
 import {getEditorialDesk} from "@/lib/editorial";
 import {AffiliateCTA} from "@/components/affiliate-cta";
+import {FunnelBridge} from "@/components/funnel-bridge";
 
 export function generateStaticParams(){return getAllArticles().map(a=>({slug:a.slug}));}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
@@ -32,7 +33,7 @@ export default async function ArticlePage({params}:{params:Promise<{slug:string}
  <ArticleVisual slug={a.slug} category={a.category} title={a.title} variant="hero"/>
  <div className="article-prose" dangerouslySetInnerHTML={{__html:articleHtml}}/><AdSlot slot={a.slug+"-contextual"} scriptUrl={process.env.NEXT_PUBLIC_AD_ARTICLE_SCRIPT_URL} zone={process.env.NEXT_PUBLIC_AD_ARTICLE_ZONE}/>
  <section className="article-faq" aria-labelledby="article-faq-title"><div className="section-header"><div><span className="eyebrow">Reader questions</span><h2 id="article-faq-title">Frequently asked questions</h2></div></div><div className="faq-list">{faqs.map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div></section>{a.sources.length>0&&<section className="sources-section"><h2>Sources & further reading</h2><ul>{a.sources.map(s=><li key={s}><a href={s} target="_blank" rel="noopener noreferrer">{s}</a></li>)}</ul></section>}
- {a.stage==="BOFU"&&a.offerKey&&<AffiliateCTA articleSlug={a.slug} position="product-final" offerKey={a.offerKey} variant="card" label="Check Current Offer →"/>}{a.slug==="34-prodentim-alternatives-what-to-compare"&&<AffiliateCTA articleSlug={a.slug} position="comparison-final" offerKey="prodentim" variant="card" label="Buy Now →"/>}
+ {a.stage==="MOFU"&&<FunnelBridge current={a} related={related}/>} {a.stage==="BOFU"&&a.offerKey&&<AffiliateCTA articleSlug={a.slug} position={a.slug==="34-prodentim-alternatives-what-to-compare"?"comparison-final":"product-final"} offerKey={a.offerKey} variant="card" label="Check Current Offer →"/>}
  {related.length>0&&<section className="related-section"><div className="section-header"><div><span className="eyebrow">Keep reading</span><h2>Related guides</h2></div></div><div className="related-grid">{related.map(x=><Link className="related-card" key={x.slug} href={"/articles/"+x.slug+"/"} prefetch={false}><span className="meta">{x.categoryName} · {x.stage}</span><h3>{x.title}</h3><p>{x.description}</p><span className="related-link">Read guide →</span></Link>)}</div></section>}</article>
  <aside className="sidebar"><div className="info-card"><span className="eyebrow">About this guide</span><h3>Search intent: {a.intent}</h3><p className="muted">This page is part of the {a.stage} editorial funnel.</p><Link className="text-link" href="/editorial-policy/">Read our editorial policy →</Link></div><div className="info-card"><span className="eyebrow">Editorial standard</span><p className="muted">No guaranteed results, fake testimonials or unsupported claims. Health articles are general information, not medical advice.</p></div></aside></div></>;
 }

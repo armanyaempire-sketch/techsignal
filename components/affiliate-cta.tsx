@@ -62,9 +62,9 @@ export function AffiliateCTA({articleSlug,position,offerKey,variant="card",label
 
   return <aside className="affiliate-card" data-affiliate-cta={position}>
     <div>
-      <span className="eyebrow">Affiliate disclosure</span>
-      <h3>{label}</h3>
-      <p>GuideSignal may earn a commission from a qualifying purchase. Review the seller's current pricing, product details and purchase terms before ordering.</p>
+      <span className="eyebrow">Affiliate disclosure · {name}</span>
+      <h3>{name}: check the current offer</h3>
+      <p>GuideSignal may earn a commission from a qualifying purchase. Verify the current product details, pricing, billing and refund terms before ordering.</p>
     </div>
     {anchor}
   </aside>;
