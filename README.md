@@ -27,4 +27,4 @@ Batch validated code and content changes and deploy once. Avoid API routes and r
 ## Before enabling a new monetization provider
 Set the real site URL for the production environment, configure the approved provider only after its exact snippets/IDs and privacy requirements are reviewed, verify analytics and consent behavior, and run npm run typecheck plus npm run build in a trusted environment.
 
-The current repository contains 31 seed articles. The longer-term 90-article roadmap is documented in docs/90-article-plan.md.
+The current repository contains 36 seed articles, including dedicated BOFU product research and a Women’s Health commercial funnel. The longer-term 90-article roadmap is documented in docs/90-article-plan.md.

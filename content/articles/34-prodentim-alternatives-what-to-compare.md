@@ -7,7 +7,7 @@ stage: BOFU
 cluster: oral-health-prodentim
 intent: commercial-investigation
 date: 2026-09-22
-updated: 2026-09-22
+updated: 2026-09-25
 author: GuideSignal Health Research Desk
 keywords: ProDentim alternatives, ProDentim comparison, oral care supplement comparison, oral probiotics comparison, dental supplement alternatives
 sources: https://www.nidcr.nih.gov/health-info/gum-disease|https://www.nccih.nih.gov/health/probiotics-usefulness-and-safety|https://pubmed.ncbi.nlm.nih.gov/40186219/
