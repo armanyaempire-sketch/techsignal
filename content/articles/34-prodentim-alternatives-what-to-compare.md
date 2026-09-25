@@ -4,6 +4,7 @@ description: A practical comparison framework for ProDentim and other oral-care 
 category: health-fitness
 categoryName: Health & Fitness
 stage: BOFU
+offerKey: prodentim
 cluster: oral-health-prodentim
 intent: commercial-investigation
 date: 2026-09-22
