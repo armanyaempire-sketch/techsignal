@@ -4,9 +4,10 @@ description: A practical checklist for comparing home-energy programs by assumpt
 category: e-business
 categoryName: E-Business & E-Marketing
 stage: MOFU
+cluster: home-energy-enrev
 intent: problem-solving
 date: 2026-09-19
-updated: 2026-09-19
+updated: 2026-09-25
 author: GuideSignal Editorial Team
 keywords: home energy program, energy savings, alternative energy, energy system guide, home energy savings
 sources: https://www.energy.gov/energysaver|https://www.energy.gov/energysaver/home-energy-audits
@@ -239,3 +240,7 @@ If a critical field is unknown, mark it as unknown rather than filling the gap w
 ## Bottom line
 
 Evaluate a home-energy program from its assumptions outward. Determine what is actually included, how savings are calculated, what the complete cost is, what alternatives exist and whether the program fits the property before accepting a savings claim.
+
+## Continue to a product-specific guide
+
+For product-specific research, continue to the [Energy Revolution System guide](/articles/18-energy-revolution-system-guide/) and verify the current offer, deliverables and checkout terms.
